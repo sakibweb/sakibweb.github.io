@@ -1,1472 +1,1640 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="htmlElement" lang="en" class="dark">
+  <head>
+    <!-- Meta tags  -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>SAKIBWEB || Developer</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="google-site-verification" content="p0_CEaCH58D8KfPjHeWztxNIPQx6wl1TbnFrEyxdCzU" />
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PJFCV2RM');</script>
-    <!-- End Google Tag Manager -->
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <!-- CSS 
-    ============================================ -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/slick.css">
-    <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
-    <link rel="stylesheet" href="assets/css/vendor/aos.css">
-    <link rel="stylesheet" href="assets/css/plugins/feature.css">
-    <!-- Style css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJFCV2RM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<body class="template-color-1 spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
-    <!-- header - developer home -->
-    <!-- Start Header -->
-    <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
-        <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
-            <!-- Start Header Left -->
-            <div class="col-lg-2 col-6">
-                <div class="header-left">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="assets/images/logo/logo.png" alt="logo">
+    <title>SAKIBWEB | Full-stack Developer</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <!-- CSS Assets -->
+    <link rel="stylesheet" href="css/app.css" />
+
+    <!-- Javascript Assets -->
+    <script src="js/app.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <style>
+    @media screen and (max-width: 640px) {
+      .tag-mobile-hidden {
+        display: none;
+      }
+    }
+    @media (min-width: 992px) {
+      .tag-pc-hidden {
+        display: none !important;
+      }
+    }
+    </style>
+
+    <script>
+      localStorage.getItem("_x_darkMode_on") === "true" &&
+        document.documentElement.classList.add("dark");
+    </script>
+
+
+
+  </head>
+
+  <body id="SAKIBWEB" x-data class="is-header-blur is-sidebar-close" x-bind="$store.global.documentBody">
+    <!-- App preloader-->
+    <div
+      class="app-preloader fixed z-50 grid h-full w-full place-content-center bg-slate-50 dark:bg-navy-900"
+    >
+      <div class="app-preloader-inner relative inline-block h-48 w-48"></div>
+    </div>
+
+
+    
+    <!-- Page Wrapper -->
+    <div
+      id="root"
+      class="flex grow bg-slate-50 dark:bg-navy-900"
+      x-cloak
+    >
+
+      <!-- App Header Wrapper-->
+      <nav class="header print:hidden">
+        <!-- App Header  -->
+        <div id="header"
+          class="header-container relative flex w-full bg-white dark:bg-navy-750 print:hidden"
+        >
+        
+          <!-- Header Items -->
+          <div class="flex w-full items-center justify-between">
+            <!-- Left: Sidebar Toggle Button -->
+            <div class="text-center items-center object-center justify-center">
+              <a href="javascript:void(0)" onclick="goTO('SAKIBWEB')" class="flex" x-data="usePopper({placement:'bottom-end',offset:12})">
+                <h1 class="text-lg font-medium text-center text-slate-700 dark:text-navy-100 transition-transform duration-500 ease-in-out hover:rotate-[360deg]">S</h1>
+                <h1 class="text-lg font-medium text-center text-slate-700 dark:text-navy-100 transition-transform duration-500 ease-in-out hover:rotate-[360deg]">A</h1>
+                <h1 class="text-lg font-medium text-center text-slate-700 dark:text-navy-100 transition-transform duration-500 ease-in-out hover:rotate-[360deg]">K</h1>
+                <h1 class="text-lg font-medium text-center text-slate-700 dark:text-navy-100 transition-transform duration-500 ease-in-out hover:rotate-[360deg]">I</h1>
+                <h1 class="text-lg font-medium text-center text-slate-700 dark:text-navy-100 transition-transform duration-500 ease-in-out hover:rotate-[360deg]">B</h1>
+                <h1 class="text-lg font-medium text-center text-slate-700 dark:text-navy-100 transition-transform duration-500 ease-in-out hover:rotate-[360deg]">W</h1>
+                <h1 class="text-lg font-medium text-center text-slate-700 dark:text-navy-100 transition-transform duration-500 ease-in-out hover:rotate-[360deg]">E</h1>
+                <h1 class="text-lg font-medium text-center text-slate-700 dark:text-navy-100 transition-transform duration-500 ease-in-out hover:rotate-[360deg]">B</h1>
+              </a>
+            </div>
+
+            
+            <!-- Right: Header buttons -->
+            <div class="-mr-1.5 flex items-center space-x-2">
+
+
+              <div class="flex -space-x-px"
+              onclick="goTO('Timeline');" style="cursor: pointer;">
+                <a class="tag bg-error/10 text-error hover:bg-error/20 focus:bg-error/20 active:bg-error/25 tag-mobile-hidden">
+                  Timeline
+                </a>
+                <a class="badge bg-error text-white shadow-lg shadow-error/50 tag-pc-hidden">
+                  <i class="fa-solid fa-timeline"></i>
+                </a>
+              </div>
+
+
+
+              <div class="flex -space-x-px"
+                @click="$store.global.isRightSidebarExpanded = true" style="cursor: pointer;">
+                <a class="tag bg-warning/10 text-warning hover:bg-warning/20 focus:bg-warning/20 active:bg-warning/25 tag-mobile-hidden">
+                  Resume
+                </a>
+                <a class="badge bg-warning text-white shadow-lg shadow-warning/50 tag-pc-hidden">
+                  <i class="fa-solid fa-paperclip"></i>
+                </a>
+              </div>
+
+
+              <div class="flex -space-x-px"
+                @click="$store.global.isRightSidebarExpanded = true" style="cursor: pointer;">
+                <a class="tag bg-success/10 text-success hover:bg-success/20 focus:bg-success/20 active:bg-success/25 tag-mobile-hidden">
+                  Projects
+                </a>
+                <a class="badge bg-success text-white shadow-lg shadow-success/50 tag-pc-hidden">
+                  <i class="fa-regular fa-bars-progress"></i>
+                </a>
+              </div>
+
+
+              <div class="flex -space-x-px"
+                @click="$store.global.isRightSidebarExpanded = true" style="cursor: pointer;">
+                <a class="tag bg-info/10 text-info hover:bg-info/20 focus:bg-info/20 active:bg-info/25 tag-mobile-hidden">
+                  Pricing
+                </a>
+                <a class="badge bg-info text-white shadow-lg shadow-info/50 tag-pc-hidden">
+                  <i class="fa-solid fa-money-check-dollar"></i>
+                </a>
+              </div>
+
+
+              <div class="flex -space-x-px"
+                @click="$store.global.isRightSidebarExpanded = true" style="cursor: pointer;">
+                <a class="tag bg-secondary/10 text-secondary hover:bg-secondary/20 focus:bg-secondary/20 active:bg-secondary/25 tag-mobile-hidden">
+                  Blog
+                </a>
+                <a class="badge bg-secondary text-white shadow-lg shadow-secondary/50 tag-pc-hidden">
+                  <i class="fa-solid fa-square-rss"></i>
+                </a>
+              </div>
+
+              
+
+              <div id="chatB" class="flex -space-x-px"
+                @click="$dispatch('show-drawer', { drawerId: 'chat' })" style="cursor: pointer;">
+                <a class="tag bg-primary/10 text-primary hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 tag-mobile-hidden">
+                  Chat
+                </a>
+                <a class="badge bg-primary text-white shadow-lg shadow-primary/50 tag-pc-hidden">
+                  <i class="fa-solid fa-comments"></i>
+                </a>
+              </div>
+
+
+              <div id="userB" class="flex -space-x-px"
+              @click="$dispatch('show-drawer', { drawerId: 'user' })" style="cursor: pointer;">
+                <a class="tag bg-primary/10 text-bg-slate-500 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 tag-mobile-hidden">
+                  User
+                </a>
+                <a class="badge bg-slate-500 text-white shadow-lg shadow-info/50 tag-pc-hidden">
+                  <i class="fa-solid fa-user"></i>
+                </a>
+              </div>
+
+
+              <button  id="darkB" @click="$store.global.isDarkModeEnabled = !$store.global.isDarkModeEnabled" class="btn h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25 tag-mobile-hidden tag-pc-hidden">
+                <svg x-show="$store.global.isDarkModeEnabled" x-transition:enter="transition-transform duration-200 ease-out absolute origin-top" x-transition:enter-start="scale-75" x-transition:enter-end="scale-100 static" class="h-6 w-6 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M11.75 3.412a.818.818 0 01-.07.917 6.332 6.332 0 00-1.4 3.971c0 3.564 2.98 6.494 6.706 6.494a6.86 6.86 0 002.856-.617.818.818 0 011.1 1.047C19.593 18.614 16.218 21 12.283 21 7.18 21 3 16.973 3 11.956c0-4.563 3.46-8.31 7.925-8.948a.818.818 0 01.826.404z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" x-show="!$store.global.isDarkModeEnabled" x-transition:enter="transition-transform duration-200 ease-out absolute origin-top" x-transition:enter-start="scale-75" x-transition:enter-end="scale-100 static" class="h-6 w-6 text-amber-400" viewBox="0 0 20 20" fill="currentColor" style="display: none;">
+                  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+
+      <div x-show="showDrawer" x-data="{showDrawer:false}" @show-drawer.window="($event.detail.drawerId === 'user') && (showDrawer = true)" @keydown.window.escape="showDrawer = false">
+        <div class="fixed inset-0 z-[100] bg-slate-900/60 transition-opacity duration-200" @click="showDrawer = false" x-show="showDrawer" x-transition:enter="ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"></div>
+        <div class="fixed left-0 top-0 z-[101] h-full w-72">
+          <div class="flex h-full w-full transform-gpu flex-col bg-white transition-transform duration-200 dark:bg-navy-700" x-show="showDrawer" x-transition:enter="ease-out" x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="ease-in" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full">
+            <div class="h-24">
+              <img class="h-full w-full object-cover object-center" src="images/800x600.png" alt="image" />
+            </div>
+            <div class="flex space-x-5 px-5">
+              <div class="avatar -mt-5 h-20 w-20">
+                <img class="rounded-full border-2 border-white dark:border-navy-700" src="images/200x200.png" alt="avatar" />
+              </div>
+              <div class="mt-2 w-full">
+                <div class="flex justify-between space-x-3">
+                  <h4 class="text-base font-medium text-slate-700 line-clamp-1 dark:text-navy-50"> John Doe </h4>
+                  <div x-data="usePopper({placement:'bottom-end',offset:4})" @click.outside="isShowPopper && (isShowPopper = false)" class="inline-flex">
+                    <button id="chatC" x-ref="popperRef" @click="isShowPopper = !isShowPopper" class="btn -mr-1.5 h-6 w-6 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                      </svg>
+                    </button>
+                    <div x-ref="popperRoot" class="popper-root" :class="isShowPopper && 'show'">
+                      <div class="popper-box rounded-md border border-slate-150 bg-white py-1.5 font-inter dark:border-navy-500 dark:bg-navy-700">
+                        <ul>
+                          <li>
+                            <a href="#" class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Action</a>
+                          </li>
+                          <li>
+                            <a href="#" class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Another Action</a>
+                          </li>
+                          <li>
+                            <a href="#" class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Something else</a>
+                          </li>
+                        </ul>
+                        <div class="my-1 h-px bg-slate-150 dark:bg-navy-500"></div>
+                        <ul>
+                          <li>
+                            <a href="#" class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Separated Link</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="cursor-pointer text-xs+ text-primary hover:text-primary-focus dark:text-accent-light dark:hover:text-accent">@johndoe</a>
+              </div>
+            </div>
+            <div class="my-4 mx-5 h-px bg-slate-200 dark:bg-navy-500"></div>
+            <ul class="grow space-y-1.5 px-5 font-inter font-medium">
+              <li>
+                <a class="flex items-center space-x-2 rounded-full bg-primary px-5 py-2.5 tracking-wide text-white outline-none transition-all dark:bg-accent" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                  <span>Getting start</span>
+                </a>
+              </li>
+              <li>
+                <a class="group flex space-x-2 rounded-full px-5 py-2.5 tracking-wide outline-none transition-all hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary dark:hover:bg-accent-light/15 dark:hover:text-accent-light dark:focus:bg-accent-light/15 dark:focus:text-accent-light" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 transition-colors group-hover:text-primary group-focus:text-primary dark:text-navy-300 dark:group-hover:text-accent dark:group-focus:text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                  </svg>
+                  <span>Shipping</span>
+                </a>
+              </li>
+              <li>
+                <a class="group flex space-x-2 rounded-full px-5 py-2.5 tracking-wide outline-none transition-all hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary dark:hover:bg-accent-light/15 dark:hover:text-accent-light dark:focus:bg-accent-light/15 dark:focus:text-accent-light" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 transition-colors group-hover:text-primary group-focus:text-primary dark:text-navy-300 dark:group-hover:text-accent dark:group-focus:text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                  </svg>
+                  <span>Payments</span>
+                </a>
+              </li>
+              <li>
+                <a class="group flex space-x-2 rounded-full px-5 py-2.5 tracking-wide outline-none transition-all hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary dark:hover:bg-accent-light/15 dark:hover:text-accent-light dark:focus:bg-accent-light/15 dark:focus:text-accent-light" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 transition-colors group-hover:text-primary group-focus:text-primary dark:text-navy-300 dark:group-hover:text-accent dark:group-focus:text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 15v-1a4 4 0 00-4-4H8m0 0l3 3m-3-3l3-3m9 14V5a2 2 0 00-2-2H6a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z" />
+                  </svg>
+                  <span>Returns</span>
+                </a>
+              </li>
+              <li>
+                <a class="group flex space-x-2 rounded-full px-5 py-2.5 tracking-wide outline-none transition-all hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary dark:hover:bg-accent-light/15 dark:hover:text-accent-light dark:focus:bg-accent-light/15 dark:focus:text-accent-light" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 transition-colors group-hover:text-primary group-focus:text-primary dark:text-navy-300 dark:group-hover:text-accent dark:group-focus:text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                  <span>My Account</span>
+                </a>
+              </li>
+              <li>
+                <a class="group flex space-x-2 rounded-full px-5 py-2.5 tracking-wide outline-none transition-all hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary dark:hover:bg-accent-light/15 dark:hover:text-accent-light dark:focus:bg-accent-light/15 dark:focus:text-accent-light" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 transition-colors group-hover:text-primary group-focus:text-primary dark:text-navy-300 dark:group-hover:text-accent dark:group-focus:text-accent" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.0449 15.8486C12.625 15.8486 13.1318 15.6729 13.5654 15.3213C13.999 14.9697 14.2393 14.5303 14.2861 14.0029H15.8242C15.7949 14.5479 15.6074 15.0664 15.2617 15.5586C14.916 16.0508 14.4531 16.4434 13.873 16.7363C13.2988 17.0293 12.6895 17.1758 12.0449 17.1758C10.75 17.1758 9.71875 16.7451 8.95117 15.8838C8.18945 15.0166 7.80859 13.833 7.80859 12.333V12.0605C7.80859 11.1348 7.97852 10.3115 8.31836 9.59082C8.6582 8.87012 9.14453 8.31055 9.77734 7.91211C10.416 7.51367 11.1689 7.31445 12.0361 7.31445C13.1025 7.31445 13.9873 7.63379 14.6904 8.27246C15.3994 8.91113 15.7773 9.74023 15.8242 10.7598H14.2861C14.2393 10.1445 14.0049 9.64062 13.583 9.24805C13.167 8.84961 12.6514 8.65039 12.0361 8.65039C11.21 8.65039 10.5684 8.94922 10.1113 9.54688C9.66016 10.1387 9.43457 10.9971 9.43457 12.1221V12.4297C9.43457 13.5254 9.66016 14.3691 10.1113 14.9609C10.5625 15.5527 11.207 15.8486 12.0449 15.8486Z" fill="currentColor" />
+                  </svg>
+                  <span>Copyright &amp; Legal</span>
+                </a>
+              </li>
+            </ul>
+            <div class="p-5">
+              <button @click="showDrawer = false" class="btn w-full space-x-2 bg-warning/10 font-medium text-warning hover:bg-warning/20 focus:bg-warning/20 active:bg-warning/25">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                <span>Logout</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div x-show="showDrawer" x-data="{showDrawer:false}" @show-drawer.window="($event.detail.drawerId === 'chat') && (showDrawer = true)" @keydown.window.escape="showDrawer = false">
+        <div class="fixed inset-0 z-[150] bg-slate-900/60 transition-opacity duration-200" @click="showDrawer = false" x-show="showDrawer" x-transition:enter="ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"></div>
+        <div class="fixed right-0 top-0 z-[151] h-full w-full sm:w-80">
+          <div class="flex h-full grow flex-col bg-white dark:bg-navy-750 transition-transform duration-200" x-show="showDrawer" x-transition:enter="ease-out" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="ease-in" x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full">
+            <div class="flex items-center justify-between pt-2 px-4">
+              <h2 class="text-sm+ font-medium tracking-wide text-warning line-clamp-1">
+                <i class="fa-solid fa-comments"></i> Chart
+              </h2>
+              <p class="w-auto text-center text-slate-400 dark:text-navy-300">
+                <!-- <div> -->
+                <span class="absolute h-4 w-4 justify-center">
+                  <span id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-20"></span>
+                  <i id="dot-d2" class="fa-solid fa-user-tie text-success inline-flex h-4 w-4 dark:border-navy-700"></i>
+                </span>
+                <!-- </div> -->
+                <i class="fa-solid fa-user-tie text-transparent justify-center">&nbsp;</i>
+                <span>Chart Now</span>
+              </p>
+              <div x-data="usePopper({placement:'bottom-end',offset:4})" @click.outside="isShowPopper &amp;&amp; (isShowPopper = false)" class="inline-flex" @click="showDrawer = false">
+                <button x-ref="popperRef" @click="isShowPopper = !isShowPopper" class="btn -mr-1.5 h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25 text-error">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div class="h-10 w-full items-center justify-center justify-between pl-2 pr-2">
+              <div class="flex w-full text-center items-center justify-center justify-between pb-2 text-slate-400 dark:text-navy-300 tag-mobile-hidden" style="padding-left: 10px;">
+                <div class="flex -space-x-px" @click="$store.global.isRightSidebarExpanded = true" style="cursor: pointer;">
+                  <a class="tag bg-error/10 text-error hover:bg-error/20 focus:bg-error/20 active:bg-error/25 tag-mobile-hidden">
+                    <i class="fa-solid fa-phone">&nbsp;</i>Discuss </a>
+                  <a class="badge bg-error text-white shadow-lg shadow-error/50 tag-pc-hidden">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </div>
+                <div class="flex -space-x-px" @click="$store.global.isRightSidebarExpanded = true" style="cursor: pointer;">
+                  <a class="tag bg-secondary/10 text-secondary hover:bg-secondary/20 focus:bg-secondary/20 active:bg-secondary/25 tag-mobile-hidden">
+                    <i class="fa-solid fa-video">&nbsp;</i>Meeting </a>
+                  <a class="badge bg-secondary text-white shadow-lg shadow-secondary/50 tag-pc-hidden">
+                    <i class="fa-solid fa-video"></i>
+                  </a>
+                </div>
+                <div class="flex -space-x-px" @click="$store.global.isRightSidebarExpanded = true" style="cursor: pointer;">
+                  <a class="tag bg-info/10 text-info hover:bg-info/20 focus:bg-info/20 active:bg-info/25 tag-mobile-hidden">
+                    <i class="fa-solid fa-display">&nbsp;</i>Remote </a>
+                  <a class="badge bg-info text-white shadow-lg shadow-info/50 tag-pc-hidden">
+                    <i class="fa-solid fa-display"></i>
+                  </a>
+                </div>
+                <div class="flex -space-x-px" @click="$store.global.isRightSidebarExpanded = true" style="cursor: pointer;">
+                  <a class="tag bg-success/10 text-success hover:bg-success/20 focus:bg-success/20 active:bg-success/25 tag-mobile-hidden">
+                    <i class="fa-regular fa-folder-open">&nbsp;</i>File </a>
+                  <a class="badge bg-success text-white shadow-lg shadow-success/50 tag-pc-hidden">
+                    <i class="fa-regular fa-folder-open"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="my-0 mx-4 h-px bg-slate-200 dark:bg-navy-500"></div>
+            </div>
+            <div class="flex h-[calc(100%-4.5rem)] grow flex-col" style="padding-left: 10px; padding-right: 10px; padding-top: 10px;">
+              <div class="is-scrollbar-hidden grow overflow-y-auto">
+                <div class="flex items-start space-x-2.5 sm:space-x-5">
+                  <div class="avatar">
+                    <img class="rounded-full" src="images/200x200.png" alt="avatar">
+                  </div>
+                  <div class="flex flex-col items-start space-y-3.5">
+                    <div class="mr-4 max-w-lg sm:mr-10">
+                      <div class="rounded-2xl rounded-tl-none bg-white p-3 text-slate-700 shadow-sm dark:bg-navy-700 dark:text-navy-100"> Hello My Dear. Lorem ipsum dolor sit amet, consectetur. </div>
+                      <p class="mt-1 ml-auto text-right text-xs text-slate-400 dark:text-navy-300"> 08:16:45pm 12/30/2020 </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-start justify-end space-x-2.5 sm:space-x-5">
+                  <div class="flex flex-col items-end space-y-3.5">
+                    <div class="ml-4 max-w-lg sm:ml-10">
+                      <div class="rounded-2xl rounded-tr-none bg-info/10 p-3 text-slate-700 shadow-sm dark:bg-accent dark:text-white"> And that’s why a 15th century </div>
+                      <p class="mt-1 ml-auto text-left text-xs text-slate-400 dark:text-navy-300"> 08:16 </p>
+                    </div>
+                  </div>
+                  <div class="avatar">
+                    <img class="rounded-full" src="images/200x200.png" alt="avatar">
+                  </div>
+                </div>
+                <div class="flex items-start justify-end space-x-2.5 sm:space-x-5">
+                  <div class="flex flex-col items-end space-y-3.5">
+                    <div class="ml-4 max-w-lg sm:ml-10">
+                      <div class="group relative">
+                        <img class="h-48 rounded-lg object-cover" src="images/800x600.png" alt="image">
+                      </div>
+                      <p class="mt-1 ml-auto text-left text-xs text-slate-400 dark:text-navy-300"> 08:16 </p>
+                    </div>
+                  </div>
+                  <div class="avatar">
+                    <img class="rounded-full" src="images/200x200.png" alt="avatar">
+                  </div>
+                </div>
+                <div class="flex items-start justify-end space-x-2.5 sm:space-x-5">
+                  <div class="flex flex-col items-end space-y-3.5">
+                    <div class="ml-4 max-w-lg sm:ml-10">
+                      <div class="group relative">
+                        <a href="#" class="inline-flex items-center space-x-1 pt-2 text-slate-600 transition-colors hover:text-primary dark:text-navy-100 dark:hover:text-accent">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                          </svg>
+                          <span>File_final.fig</span>
                         </a>
+                      </div>
+                      <p class="mt-1 ml-auto text-left text-xs text-slate-400 dark:text-navy-300"> 08:16 </p>
                     </div>
+                  </div>
+                  <div class="avatar">
+                    <img class="rounded-full" src="images/200x200.png" alt="avatar">
+                  </div>
                 </div>
-            </div>
-            <!-- End Header Left -->
-            <!-- Start Header Center -->
-            <div class="col-lg-10 col-6">
-                <div class="header-center">
-                    <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block">
-                        <!-- Start Mainmanu Nav -->
-                        <ul class="primary-menu nav nav-pills">
-                            <li class="nav-item"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link smoth-animation" href="#experiences">Experience</a></li>
-                            <li class="nav-item"><a class="nav-link smoth-animation" href="#educations">Education</a></li>
-                            <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a></li>
-                            <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link smoth-animation" href="#footer">Footer</a></li>
-                        </ul>
-                        <!-- End Mainmanu Nav -->
-                    </nav>
-                    <!-- Start Header Right  -->
-                    <div class="header-right">
-                        <a class="rn-btn" target="_blank" href="https://themeforest.net/checkout/from_item/33188244?license=regular"><span>BUY NOW</span></a>
-
-                        <div class="hamberger-menu d-block d-xl-none">
-                            <i id="menuBtn" class="feather-menu humberger-menu"></i>
-                        </div>
-
-                        <div class="close-menu d-block">
-                            <span class="closeTrigger">
-                                <i data-feather="x"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End Header Right  -->
-
+              </div>
+              <div class="flex flex-col pb-0" style="padding-left: 10px; padding-right: 10px;">
+                <div class="relative flex h-12 w-full shrink-0 items-center justify-between border-t border-slate-150 transition-[padding,width] duration-[.25s] dark:border-navy-600">
+                  <div class="-ml-1.5 flex flex-1 space-x-2" x-data="{value: $persist('').as('other-value')}">
+                    <button class="btn h-9 w-9 shrink-0 rounded-full p-0 text-slate-500 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:text-navy-200 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5.5 w-5.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path>
+                      </svg>
+                    </button>
+                    <textarea x-model="value" type="text" class="form-input h-9 w-full resize-none bg-transparent placeholder:text-slate-400/70 is-scrollbar-hidden grow overflow-y-auto flex" placeholder="Write the message" style="display: flex; justify-content: center; align-items: center;"></textarea>
+                  </div>
+                  <div class="-mr-1.5 flex">
+                    <button class="btn h-9 w-9 shrink-0 rounded-full p-0 text-slate-500 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:text-navy-200 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5.5 w-5.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                    </button>
+                    <button class="btn h-9 w-9 shrink-0 rounded-full p-0 text-primary hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:text-accent-light dark:hover:bg-accent-light/20 dark:focus:bg-accent-light/20 dark:active:bg-accent-light/25">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5.5 w-5.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.813 5.146 9.027 3.99c4.05 1.79 4.05 4.718 0 6.508l-9.027 3.99c-6.074 2.686-8.553.485-5.515-4.876l.917-1.613c.232-.41.232-1.09 0-1.5l-.917-1.623C1.26 4.66 3.749 2.46 9.813 5.146ZM6.094 12.389h7.341"></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+              </div>
             </div>
-            <!-- End Header Center -->
+          </div>
         </div>
-    </header>
-    <!-- End Header Area -->
+      </div>
 
-    <!-- Start Popup Mobile Menu  -->
-    <div class="popup-mobile-menu">
-        <div class="inner">
-            <div class="menu-top">
-                <div class="menu-header">
-                    <a class="logo" href="index.html">
-                        <img src="assets/images/logo/logo.png" alt="Personal Portfolio">
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+<!-- ##############################################################################################################
+##############################################################################################################
+##############################################################################################################
+##############################################################################################################
+############################################################################################################## -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Main Content Wrapper -->
+      <main class="main-content w-full pb-0" style="margin-left: 0px;">
+        <div
+          class="mt-4 grid grid-cols-12 gap-4 px-[var(--margin-x)] transition-all duration-[.25s] sm:mt-5 sm:gap-5 lg:mt-6 lg:gap-6"
+        >
+          <div class="col-span-12 lg:col-span-8">
+
+
+            <div class="flex flex-col sm:flex-row sm:space-x-7">
+
+
+            <div class="ax-transparent-gridline grid w-full grid-cols-1 tag-mobile-hidden">
+              <!-- <img class="mt-5 h-80 w-full rounded-lg object-cover object-center" src="images/800x600.png" alt="image"> -->
+              <h3 class="text-s font-medium text-center w-full text-slate-700 dark:text-navy-100">
+                SakibWeb - Full-stack Development
+              </h3>
+              <div
+                x-init="$nextTick(() => $el._x_swiper = new Swiper($el,{effect: 'cards', grabCursor: true, autoplay: {delay: 2000}}))"
+                class="swiper h-80 w-full rounded-lg object-cover object-center"
+              >
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      class="h-full w-full rounded-lg object-cover"
+                      src="images/800x600.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="h-full w-full rounded-lg object-cover"
+                      src="images/800x600.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="h-full w-full rounded-lg object-cover"
+                      src="images/800x600.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="h-full w-full rounded-lg object-cover"
+                      src="images/800x600.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+
+              <div
+                class="mt-14 flex shrink-0 flex-col items-center sm:items-start"
+              >
+                <div class="flex grow flex-col items-center px-4 pb-5 sm:px-5">
+                  <div class="avatar h-20 w-20">
+                    <img
+                      class="mask is-reuleaux-triangle"
+                      src="images/me.jpg"
+                      alt="avatar"
+                    />
+                    <div id="dot" x-tooltip.placement.right="'Online'" class="absolute right-3 bottom-0 -m-0.9 h-4 w-4 justify-center">
+                      <div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-20"></div>
+                      <div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-success border-2 border-background-color dark:border-navy-700"></div>
+                    </div>
+                  </div>
+                  <h3 class="pt-3 text-lg font-medium text-slate-700 dark:text-navy-100">
+                    Sakibur Rahman
+                  </h3>
+                  <p class="text-xs+">Full-stack Developer</p>
+                  <p class="text-xs+ text-center justify-center items-center" title="Award Level 1">Since 2018 <img x-tooltip="'Award Level 1'" class="h-4 w-4 inline-block" src="images/awards/award-19.svg" alt="avatar"></p>
+
+                  <div id="dot-f" class="badge space-x-2.5 mt-2 rounded-full text-success dark:bg-success/15">
+                    <div id="dot-f-d1" class="h-2 w-2 rounded-full bg-current"></div>
+                    <span id="dot-f-d2">Active on duty</span>
+                  </div>
+
+                  <a href="mailto:sakibdev.me@gmail.com" class="inline-flex items-center space-x-1 pt-2 text-slate-600 transition-colors hover:text-primary dark:text-navy-100 dark:hover:text-accent">
+                    <i class="fa-sharp fa-solid fa-at"></i>
+                    <span>sakibdev.me@gmail.com</span>
+                  </a>
+
+                  <a href="tel:+8801774321010" class="inline-flex items-center space-x-1 pt-2 text-slate-600 transition-colors hover:text-primary dark:text-navy-100 dark:hover:text-accent">
+                    <i class="fa-sharp fa-solid fa-phone"></i>
+                    <span>+8801774321010</span>
+                  </a>
+
+                  <a href="#" class="inline-flex items-center space-x-1 pt-2 text-slate-600 transition-colors hover:text-primary dark:text-navy-100 dark:hover:text-accent">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <span>Natore, Rajshahi</span>
+                  </a>
+
+
+                  <div class="mb-3 mt-3 flex grow flex-wrap items-start" style="margin-bottom: 10px; justify-content: space-between;">
+                    <a
+                      href="https://g.dev/sakibweb"
+                      class="tag rounded-full bg-info/10 text-info hover:bg-info/20 focus:bg-info/20 active:bg-info/25 mr-1"
+                      target="_blank" x-tooltip.placement.top="'Developers Google'" >
+                    <i class="fa-brands fa-google transition-transform duration-500 ease-in-out hover:rotate-[360deg]"></i>
                     </a>
-                    <div class="close-button">
-                        <button class="close-menu-activation close"><i data-feather="x"></i></button>
-                    </div>
+                    <a
+                      href="https://www.cloudskillsboost.google/public_profiles/1e8bc788-27e0-4078-a5fb-134f4aff7074"
+                      class="tag rounded-full bg-info/10 text-info hover:bg-info/20 focus:bg-info/20 active:bg-info/25 mr-1"
+                      target="_blank" x-tooltip.placement.top="'Google Cloud'" >
+                    <i class="fa-solid fa-cloud transition-transform duration-500 ease-in-out hover:rotate-[360deg]"></i>
+                    </a>
+                    <a
+                      href="https://github.com/sakibweb"
+                      class="tag rounded-full bg-info/10 text-info hover:bg-info/20 focus:bg-info/20 active:bg-info/25 mr-1"
+                      target="_blank" x-tooltip.placement.top="'Github'" >
+                    <i class="fa-brands fa-github transition-transform duration-500 ease-in-out hover:rotate-[360deg]"></i>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/sakibweb"
+                      class="tag rounded-full bg-info/10 text-info hover:bg-info/20 focus:bg-info/20 active:bg-info/25 mr-1"
+                      target="_blank" x-tooltip.placement.top="'Linkedin'" >
+                      <i class="fa-brands fa-linkedin-in transition-transform duration-500 ease-in-out hover:rotate-[360deg]"></i>
+                    </a>
+                    <a
+                      href="https://www.facebook.com/sakib1997"
+                      class="tag rounded-full bg-info/10 text-info hover:bg-info/20 focus:bg-info/20 active:bg-info/25 mr-1"
+                      target="_blank" x-tooltip.placement.top="'Facebook'" >
+                      <i class="fa-brands fa-facebook transition-transform duration-500 ease-in-out hover:rotate-[360deg]"></i>
+                    </a>
+                    <a
+                      href="https://twitter.com/sakibwebs"
+                      class="tag rounded-full bg-info/10 text-info hover:bg-info/20 focus:bg-info/20 active:bg-info/25"
+                      target="_blank" x-tooltip.placement.top="'Twitter'" >
+                      <i class="fa-brands fa-twitter transition-transform duration-500 ease-in-out hover:rotate-[360deg]"></i>
+                    </a>
+                  </div>
+
+
+                  <div class="mt-1 grid w-full grid-cols-1 gap-1">
+                    <button
+                      class="btn space-x-2 bg-slate-150 px-0 font-medium text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
+                      @click="$dispatch('show-drawer', { drawerId: 'chat' })">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                      <span> Chat Now </span>
+                    </button>
+                  </div>
+
                 </div>
-                <p class="discription">Lorem ipsum dolor sit amet consect adipisicing elit repellendus.
+              </div>
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+          
+
+          <div class="col-span-12 lg:col-span-4">
+            <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-1 lg:grid-cols-2" id="tp">
+
+              <div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
+                <div class="flex justify-between space-x-1">
+                  <p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
+                    <span id="tp-pc" name="pc">375</span>
+                  </p>
+                  <i class="fa-sharp fa-solid fa-bars-progress text-primary text-lg"></i>
+                </div>
+                <p class="mt-1 text-xs+">Project completed</p>
+              </div>
+
+              <div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
+                <div class="flex justify-between">
+                  <p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
+                    <span id="tp-mc" name="mc">12.6K</span>
+                  </p>
+                  <i class="fa-sharp fa-solid fa-cubes-stacked text-secondary text-lg"></i>
+                </div>
+                <p class="mt-1 text-xs+">Mission Completed</p>
+              </div>
+
+              <div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
+                <div class="flex justify-between">
+                  <p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
+                    <span id="tp-tc" name="tc">143</span>
+                  </p>
+                  <i class="fa-sharp fa-solid fa-list-check text-info text-lg"></i>
+                </div>
+                <p class="mt-1 text-xs+">Task Completed</p>
+              </div>
+
+              <div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
+                <div class="flex justify-between">
+                  <p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
+                    <span id="tp-es" name="es">651</span>
+                  </p>
+                  <i class="fa-sharp fa-solid fa-bug text-success text-lg"></i>
+                </div>
+                <p class="mt-1 text-xs+">Complex error solved</p>
+              </div>
+
+              <div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
+                <div class="flex justify-between space-x-1">
+                  <p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
+                    <span id="tp-cs" name="cs">460</span>
+                  </p>
+                  <i class="fa-sharp fa-solid fa-ticket text-error text-lg"></i>
+                </div>
+                <p class="mt-1 text-xs+">Chat & ticket solved</p>
+              </div>
+
+              <div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
+                <div class="flex justify-between">
+                  <p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
+                    <span id="tp-ts" name="ts">460</span>
+                  </p>
+                  <i class="fa-sharp fa-solid fa-business-time text-warning text-lg"></i>
+                </div>
+                <p class="mt-1 text-xs+">Time spending</p>
+              </div>
+
+              <div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
+                <div class="flex justify-between space-x-1">
+                  <p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
+                    <span id="tp-pr" name="pr">460</span>
+                  </p>
+                  <i class="fa-sharp fa-solid fa-person-running text-navy-400 text-lg"></i>
+                </div>
+                <p class="mt-1 text-xs+">Performance rating</p>
+              </div>
+              <div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
+                <div class="flex justify-between">
+                  <p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
+                    <span id="tp-sr" name="sr">460</span>
+                  </p>
+                  <i class="fa-sharp fa-solid fa-thumbs-up text-slate-150 text-lg"></i>
+                </div>
+                <p class="mt-1 text-xs+">Success rate</p>
+              </div>
+            </div>
+          </div>
+        
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="Timeline"
+          class="mt-4 grid grid-cols-12 gap-4 bg-slate-150 py-5 dark:bg-navy-800 sm:mt-3 sm:gap-5 lg:mt-3 lg:gap-6"
+        >
+          <div
+            class="col-span-12 flex flex-col px-[var(--margin-x)] transition-all duration-[.25s] lg:col-span-3 lg:pr-0"
+          >
+            <h1
+              class="text-base text-xl font-semibold tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100 lg:text-xl text-center"
+            >
+              <span id="time-now" name="time-now">10:30pm</span>
+            </h1>
+            <p
+              class="text-s text-slate-700 dark:text-navy-100 text-center"
+            >
+            Daily 11:00am - 11:00pm
+            </p>
+
+
+            <div class="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-x-5 lg:grid-cols-1">
+
+              
+
+              <div class="card p-3">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar h-12 w-12">
+                      <div
+                        class="is-initial rounded-lg bg-success/10 text-base uppercase text-success">
+                      <i class="fa-solid fa-person-running"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
+                        Active Time
+                      </p>
+                      <p class="mt-0.5 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">
+                        <span id="active-t">9898h Time spending</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="relative cursor-pointer">
+                    <p class="text-xl font-semibold text-slate-700 text-success">
+                      <span id="time-ac">790</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card p-3">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar h-12 w-12">
+                      <div
+                        class="is-initial rounded-lg bg-error/10 text-base uppercase text-error">
+                      <i class="fa-solid fa-plug-circle-xmark"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
+                        Deactive Time
+                      </p>
+                      <p class="mt-0.5 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">
+                        <span id="deactive-t">9898h Time spending</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="relative cursor-pointer">
+                    <p class="text-xl font-semibold text-slate-700 text-error">
+                      <span id="time-dt">790</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card p-3">
+                <div class="flex items-center justify-between space-x-2">
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar h-12 w-12">
+                      <div
+                        class="is-initial rounded-lg bg-warning/10 text-base uppercase text-warning">
+                      <i class="fa-solid fa-mug-hot"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100">
+                        Break Time
+                      </p>
+                      <p class="mt-0.5 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">
+                        <span id="break-t">9898h Time spending</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="relative cursor-pointer">
+                    <p class="text-xl font-semibold text-slate-700 text-warning">
+                      <span id="time-ts">790</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              
+
+            </div>
+
+
+
+
+
+
+            <div class="mt-4">
+              <div class="flex grow justify-between space-x-2">
+                <div>
+                  <p class="text-xs+ text-slate-400 dark:text-navy-300">
+                    Performance rating
+                  </p>
+                  <p class="text-lg font-semibold text-slate-700 dark:text-navy-100">
+                    ⭐ <span id="tm-pr" name="pr">4.7</span> 
+                  </p>
+                </div>
+                <div>
+                  <p class="text-xs+ text-slate-400 dark:text-navy-300">
+                    Success rate
+                  </p>
+                  <p class="text-lg font-semibold text-slate-700 dark:text-navy-100">
+                    ✔️ <span id="tm-sr" name="sr">98%</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="is-scrollbar-hidden col-span-12 flex space-x-4 overflow-x-scroll px-[var(--margin-x)] -right-px[var(--margin-x)] transition-all duration-[.25s] lg:col-span-9 lg:pl-0" id="scl_box" style="overflow-x: scroll; padding-right: var(--margin-x);"
+          >
+            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5">
+              <div class="flex items-center justify-between space-x-2">
+                <div class="flex items-center space-x-3">
+                  <div class="avatar h-12 w-12">
+                    <div
+                      class="is-initial rounded-lg bg-secondary/10 text-base uppercase text-secondary dark:bg-secondary-light/10 dark:text-secondary-light"
+                    >
+                    <i class="fa-sharp fa-solid fa-bars-progress text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <p
+                      class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"
+                    >
+                      Available Project
+                    </p>
+                    <p class="text-xs text-slate-400 dark:text-navy-300">
+                      <span id="tm-pc" name="pc">375</span> Completed
+                    </p>
+                  </div>
+                </div>
+                <div class="flex space-x-2">
+                  <div class="relative cursor-pointer">
+                    <p
+                    class="text-xl font-semibold text-slate-700 text-secondary"
+                  >
+                    <span id="tm-ap" name="ap">790</span>
+                  </p>
+                  </div>
+                </div>
+              </div>
+              <ol class="timeline line-space max-w-sm">
+                <li class="timeline-item">
+                  <div id="ap1-v" class="timeline-item-point rounded-full bg-success">
+                    <span
+                      class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"
+                    ></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p
+                        class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                      >
+                        <span id="ap1-t">ISP Gen...</span>
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300"
+                        ><span id="ap1-s">Acctive</span></span
+                      >
+                    </div>
+                    <p class="py-1">
+                      <span id="ap1-d">Robert Nolan completed the design of the CRM application</span>
+                    </p>
+                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                      <div id="ap1-p" x-tooltip="'59% done'" class="is-active relative overflow-hidden rounded-full bg-success" style="width: 59%;"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <div  id="ap2-v"
+                    class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"
+                  ></div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p
+                        class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                      >
+                        <span id="ap2-t">ISP Gen...</span>
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300"
+                        ><span id="ap2-s">Acctive</span></span
+                      >
+                    </div>
+                    <p class="py-1">
+                      <span id="ap2-d">Robert Nolan completed the design of the CRM application</span>
+                    </p>
+                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                      <div id="ap2-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <div  id="ap3-v"
+                    class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"
+                  ></div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p
+                        class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                      >
+                        <span id="ap3-t">ISP Gen...</span>
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300"
+                        ><span id="ap3-s">Acctive</span></span
+                      >
+                    </div>
+                    <p class="py-1">
+                      <span id="ap3-d">Robert Nolan completed the design of the CRM application</span>
+                    </p>
+                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                      <div id="ap3-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+
+
+
+            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5">
+              <div class="flex items-center justify-between space-x-2">
+                <div class="flex items-center space-x-3">
+                  <div class="avatar h-12 w-12">
+                    <div class="is-initial rounded-lg bg-info/10 text-base uppercase text-info">
+                      <i class="fa-sharp fa-solid fa-cubes-stacked text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <p
+                      class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"
+                    >
+                      Available Mission
+                    </p>
+                    <p class="text-xs text-slate-400 dark:text-navy-300">
+                      <span id="tm-mc" name="mc">375</span> Completed
+                    </p>
+                  </div>
+                </div>
+                <div class="flex space-x-2">
+                  <div class="relative cursor-pointer">
+                  <p
+                    class="text-xl font-semibold text-slate-700 text-info"
+                  >
+                  <span id="tm-am" name="am">790</span>
                 </p>
-            </div>
-            <div class="content">
-                <ul class="primary-menu nav nav-pills">
-                    <li class="nav-item"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#experiences">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#educations">Education</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#footer">Footer</a></li>
-                </ul>
-                <!-- social sharea area -->
-                <div class="social-share-style-1 mt--40">
-                    <span class="title">find with me</span>
-                    <ul class="social-share d-flex liststyle">
-                        <li class="facebook"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
-                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                                </svg></a>
-                        </li>
-                        <li class="instagram"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
-                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                </svg></a>
-                        </li>
-                        <li class="linkedin"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
-                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                    <rect x="2" y="9" width="4" height="12"></rect>
-                                    <circle cx="4" cy="4" r="2"></circle>
-                                </svg></a>
-                        </li>
-                    </ul>
                 </div>
-                <!-- end -->
+              </div>
             </div>
+            <ol class="timeline line-space max-w-sm">
+              <li class="timeline-item">
+                <div id="am1-v" class="timeline-item-point rounded-full bg-success">
+                  <span
+                    class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"
+                  ></span>
+                </div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="am1-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="am1-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="am1-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="am1-p" x-tooltip="'59% done'" class="is-active relative overflow-hidden rounded-full bg-success" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div id="am2-v"
+                  class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"
+                ></div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="am2-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="am2-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="am2-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="am2-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div id="am3-v"
+                  class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"
+                ></div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="am3-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="am3-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="am3-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="am3-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </li>
+            </ol>
+            </div>
+
+
+
+
+
+
+
+            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5">
+              <div class="flex items-center justify-between space-x-2">
+                <div class="flex items-center space-x-3">
+                  <div class="avatar h-12 w-12">
+                    <div
+                      class="is-initial rounded-lg bg-success/10 text-base uppercase text-success"
+                    >
+                    <i class="fa-sharp fa-solid fa-list-check text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <p
+                      class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"
+                    >
+                      Available Task
+                    </p>
+                    <p class="text-xs text-slate-400 dark:text-navy-300">
+                      <span id="tm-mc" name="mc">375</span> Completed
+                    </p>
+                  </div>
+                </div>
+                <div class="flex space-x-2">
+                  <div class="relative cursor-pointer">
+                  <p
+                    class="text-xl font-semibold text-slate-700 text-success"
+                  >
+                  <span id="tm-at" name="at">790</span>
+                </p>
+                </div>
+              </div>
+            </div>
+            <ol class="timeline line-space max-w-sm">
+              <li class="timeline-item">
+                <div id="at1-v" class="timeline-item-point rounded-full bg-success">
+                  <span
+                    class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"
+                  ></span>
+                </div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="at1-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="at1-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="at1-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="at1-p" x-tooltip="'59% done'" class="is-active relative overflow-hidden rounded-full bg-success" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div id="at2-v"
+                  class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"
+                ></div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="at2-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="at2-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="at2-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="at2-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div id="at3-v"
+                  class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"
+                ></div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="at3-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="at3-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="at3-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="at3-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </li>
+              </ol>
+            </div>
+
+            
+
+
+            
+
+
+
+
+
+            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5">
+              <div class="flex items-center justify-between space-x-2">
+                <div class="flex items-center space-x-3">
+                  <div class="avatar h-12 w-12">
+                    <div
+                      class="is-initial rounded-lg bg-error/10 text-base uppercase text-error"
+                    >
+                    <i class="fa-sharp fa-solid fa-bug text-lg"></i>
+                    </div>
+                  </div> 
+                  <div>
+                    <p
+                      class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"
+                    >
+                      Available Error
+                    </p>
+                    <p class="text-xs text-slate-400 dark:text-navy-300">
+                      <span id="tm-es" name="es">375</span> solved
+                    </p>
+                  </div>
+                </div>
+                <div class="flex space-x-2">
+                  <div class="relative cursor-pointer">
+                  <p
+                    class="text-xl font-semibold text-slate-700 text-error"
+                  >
+                  <span id="tm-ae" name="ae">790</span>
+                </p>
+                </div>
+              </div>
+            </div>
+            <ol class="timeline line-space max-w-sm">
+              <li class="timeline-item">
+                <div id="ae1-v" class="timeline-item-point rounded-full bg-success">
+                  <span
+                    class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"
+                  ></span>
+                </div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="ae1-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="ae1-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="ae1-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="ae1-p" x-tooltip="'59% done'" class="is-active relative overflow-hidden rounded-full bg-success" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div id="ae2-v"
+                  class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"
+                ></div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="ae2-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="ae2-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="ae2-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="ae2-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div id="ae3-v"
+                  class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"
+                ></div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="ae3-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="ae3-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="ae3-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="ae3-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </ol>
+            </div>
+
+
+
+
+
+
+
+            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5">
+              <div class="flex items-center justify-between space-x-2">
+                <div class="flex items-center space-x-3">
+                  <div class="avatar h-12 w-12">
+                    <div
+                      class="is-initial rounded-lg bg-warning/10 text-base uppercase text-warning"
+                    >
+                    <i class="fa-sharp fa-solid fa-ticket text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <p
+                      class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"
+                    >
+                      Available Ticket
+                    </p>
+                    <p class="text-xs text-slate-400 dark:text-navy-300">
+                      <span id="tm-cs" name="cs">375</span> solved
+                    </p>
+                  </div>
+                </div>
+                <div class="flex space-x-2">
+                  <div class="relative cursor-pointer">
+                  <p
+                    class="text-xl font-semibold text-slate-700 text-warning"
+                  >
+                  <span id="tm-nt" name="nt">790</span>
+                </p>
+                </div>
+              </div>
+            </div>
+            <ol class="timeline line-space max-w-sm">
+              <li class="timeline-item">
+                <div id="nt1-v" class="timeline-item-point rounded-full bg-success">
+                  <span
+                    class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"
+                  ></span>
+                </div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="nt1-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="nt1-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="nt1-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="nt1-p" x-tooltip="'59% done'" class="is-active relative overflow-hidden rounded-full bg-success" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div id="nt2-v"
+                  class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"
+                ></div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="nt2-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="nt2-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="nt2-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="nt2-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div id="nt3-v"
+                  class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"
+                ></div>
+                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                    <p
+                      class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0"
+                    >
+                      <span id="nt3-t">ISP Gen...</span>
+                    </p>
+                    <span class="text-xs text-slate-400 dark:text-navy-300"
+                      ><span id="nt3-s">Acctive</span></span
+                    >
+                  </div>
+                  <p class="py-1">
+                    <span id="nt3-d">Robert Nolan completed the design of the CRM application</span>
+                  </p>
+                  <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                    <div id="nt3-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
+                  </div>
+                </div>
+              </ol>
+            </div>
+
+            
+
+
+            
+
+            
+
+          </div>
         </div>
+
+
+
+
+
+
+
+        
+      </main>
+
+
+
+
     </div>
-    <!-- End Popup Mobile Menu  -->
 
-    <main class="main-page-wrapper">
 
-        <!-- Start Slider Area -->
-        <div id="home" class="rn-slide-area">
-            <div class="slide slider-style-3">
-                <div class="container">
-                    <div class="row slider-wrapper">
-                        <div class="order-2 order-xl-1 col-lg-12 col-xl-5 mt_lg--50 mt_md--50 mt_sm--50">
-                            <div class="slider-info">
-                                <div class="row">
-                                    <div class="col-xl-12 col-lg-12 col-12">
-                                        <div class="user-info-top">
-                                            <div class="user-info-header">
-                                                <div class="user">
-                                                    <i data-feather="user"></i>
-                                                </div>
-                                                
-                                                
-                                                <h1 class="title">Hi, I’m <span>SAKIB</span><br>
-                                                    <span class="header-caption" id="page-top">
-                                                        <!-- type headline start-->
-                                                        <span class="cd-headline clip is-full-width">
-                                                            <span>a </span>
-                                                    <!-- ROTATING TEXT -->
-                                                    <span class="cd-words-wrapper">
-                                                                <b class="is-visible">Designer</b>
-                                                                <b class="is-hidden">Programmer</b>
-                                                                <b class="is-hidden">Developer</b>
-                                                            </span>
-                                                    </span>
-                                                    <!-- type headline end -->
-                                                    </span>
-                                                </h1>
-                                                
-<!--                                                 <h2 class="title">
-                                                    Hi, I’m <span>InBio</span>
-                                                </h2> -->
-                                                <p class="disc">Web designer and developer working for envato.com in Paris,
-                                                    France.</p>
-                                            </div>
-                                            <div class="user-info-footer">
-                                                <div class="info">
-                                                    <i data-feather="file"></i>
-                                                    <span>Web designer & developer</span>
-                                                </div>
-                                                <div class="info">
-                                                    <i data-feather="mail"></i>
-                                                    <span>john.slady@gmail.com</span>
-                                                </div>
-                                                <div class="info">
-                                                    <i data-feather="map-pin"></i>
-                                                    <span>Paris fan</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="col-xl-12 col-lg-12 col-12">
-                                        <div class="user-info-bottom">
-                                            <span>Download my curriculum vitae: </span>
-                                            <div class="button-wrapper d-flex">
-                                                <a class="rn-btn mr--30" href="#contacts"><span>DOWNLOAD CV</span></a>
-                                                <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="order-1 order-xl-2 col-lg-12 col-xl-7">
-                            <div class="background-image-area">
-                                <div class="thumbnail-image">
-                                    <img src="assets/images/portfolio/me.png" alt="Sakibur Rahman">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Slider Area -->
-
-        <!-- Start Experience area -->
-        <div id="experiences" class="rn-experience-area section-separator rn-section-gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center">
-                            <span class="subtitle">Over 10 years of experience</span>
-                            <h2 class="title">My Experience</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt--10">
-                    <div class="col-12 mt_experience">
-
-                        <!-- single skills -->
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="experience-style-two">
-                            <div class="experience-left">
-                                <div class="experience-image">
-                                    <img src="assets/images/portfolio/portfolio-01.jpg" alt="Personal Portfolio">
-                                </div>
-                                <div class="experience-center">
-                                    <span class="date">2015-Present</span>
-                                    <h4 class="experience-title">
-                                        Rainbow - Themes.
-                                    </h4>
-                                    <h6 class="subtitle">
-                                        Co-Founder, Web Designer & Developer
-                                    </h6>
-                                    <p class="disc">Reinvetning the way you create websites</p>
-                                </div>
-                            </div>
-                            <div class="experience-right">
-                                <div class="experience-footer">
-                                    <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single skills -->
-
-                        <!-- single skills -->
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="experience-style-two">
-                            <div class="experience-left">
-                                <div class="experience-image">
-                                    <img src="assets/images/portfolio/portfolio-02.jpg" alt="Personal Portfolio">
-                                </div>
-                                <div class="experience-center">
-                                    <span class="date">2015-Present</span>
-                                    <h4 class="experience-title">
-                                        App Development.
-                                    </h4>
-                                    <h6 class="subtitle">
-                                        Co-Founder, Web Designer & Developer
-                                    </h6>
-                                    <p class="disc">Reinvetning the way you create websites</p>
-                                </div>
-                            </div>
-                            <div class="experience-right">
-                                <div class="experience-footer">
-                                    <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single skills -->
-
-                        <!-- single skills -->
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="experience-style-two">
-                            <div class="experience-left">
-                                <div class="experience-image">
-                                    <img src="assets/images/portfolio/portfolio-03.jpg" alt="Personal Portfolio">
-                                </div>
-                                <div class="experience-center">
-                                    <span class="date">2015-Present</span>
-                                    <h4 class="experience-title">
-                                        Application Management.
-                                    </h4>
-                                    <h6 class="subtitle">
-                                        Co-Founder, Web Designer & Developer
-                                    </h6>
-                                    <p class="disc">Reinvetning the way you create websites</p>
-                                </div>
-                            </div>
-                            <div class="experience-right">
-                                <div class="experience-footer">
-                                    <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single skills -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Experience area -->
-
-        <!-- Start education section -->
-        <div id="educations" class="rn-education-area rn-section-gap section-separator">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center">
-                            <span class="subtitle">Phd, Master and Bachelo</span>
-                            <h2 class="title">Education</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt--10">
-                    <div class="col-12 mt_experience">
-                        <!-- single skills -->
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="experience-style-two">
-                            <div class="experience-left">
-                                <div class="experience-image">
-                                    <img src="assets/images/portfolio/portfolio-04.jpg" alt="Personal Portfolio">
-                                </div>
-                                <div class="experience-center">
-                                    <span class="date">2015-Present</span>
-                                    <h4 class="experience-title">
-                                        Software Develop.
-                                    </h4>
-                                    <h6 class="subtitle">
-                                        Co-Founder, Web Designer & Developer
-                                    </h6>
-                                    <p class="disc">Reinvetning the way you create websites</p>
-                                </div>
-                            </div>
-                            <div class="experience-right">
-                                <div class="experience-footer">
-                                    <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single skills -->
-
-                        <!-- single skills -->
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="experience-style-two">
-                            <div class="experience-left">
-                                <div class="experience-image">
-                                    <img src="assets/images/portfolio/portfolio-05.jpg" alt="Personal Portfolio">
-                                </div>
-                                <div class="experience-center">
-                                    <span class="date">2015-Present</span>
-                                    <h4 class="experience-title">
-                                        Web Design.
-                                    </h4>
-                                    <h6 class="subtitle">
-                                        Co-Founder, Web Designer & Developer
-                                    </h6>
-                                    <p class="disc">Reinvetning the way you create websites</p>
-                                </div>
-                            </div>
-                            <div class="experience-right">
-                                <div class="experience-footer">
-                                    <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single skills -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End education section -->
-
-        <!-- Start Resume Area -->
-        <div class="rn-resume-area rn-section-gap section-separator" id="resume">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center">
-                            <span class="subtitle">7+ Years of Experience</span>
-                            <h2 class="title">My Resume</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt--45">
-                    <div class="col-lg-12">
-                        <ul data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="rn-nav-list nav nav-tabs" id="myTabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="true">education</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " id="professional-tab" data-toggle="tab" href="#professional" role="tab" aria-controls="professional" aria-selected="false">professional
-                                    Skills</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="experience-tab" data-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="false">experience</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="interview-tab" data-toggle="tab" href="#interview" role="tab" aria-controls="interview" aria-selected="false">interview</a>
-                            </li>
-                        </ul>
-
-                        <!-- Start Tab Content Wrapper  -->
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="rn-nav-content tab-content" id="myTabContents">
-
-                            <!-- Start Single Tab  -->
-                            <div class="tab-pane show active fade single-tab-area" id="education" role="tabpanel" aria-labelledby="education-tab">
-                                <div class="personal-experience-inner mt--40">
-                                    <div class="row">
-                                        <!-- Start Skill List Area  -->
-                                        <div class="col-lg-6 col-md-12 col-12">
-                                            <div class="content">
-                                                <span class="subtitle">2007 - 2010</span>
-                                                <h4 class="maintitle">Education Quality</h4>
-                                                <div class="experience-list">
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Personal Portfolio April Fools</h4>
-                                                                    <span>University of DVI (1997 - 2001)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.30/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4> Examples Of Personal Portfolio</h4>
-                                                                    <span>College of Studies (2000 - 2002)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.50/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Maecenas finibus nec sem ut
-                                                                imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Tips For Personal Portfolio</h4>
-                                                                    <span>University of Studies (1997 - 2001)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.80/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description"> If you are going to use a passage. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Skill List Area  -->
-
-                                        <!-- Start Skill List Area 2nd  -->
-                                        <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                                            <div class="content">
-                                                <span class="subtitle">2007 - 2010</span>
-                                                <h4 class="maintitle">Job Experience</h4>
-                                                <div class="experience-list">
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Diploma in Web Development</h4>
-                                                                    <span>BSE In CSE (2004 - 2008)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.70/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>The Personal Portfolio Mystery</h4>
-                                                                    <span>Job at Rainbow-Themes (2008 - 2016)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.95/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Diploma in Computer Science</h4>
-                                                                    <span>Works at Plugin Development (2016 - 2020)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>5.00/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Maecenas finibus nec sem ut
-                                                                imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Skill List Area  -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Tab  -->
-
-                            <!-- Start Single Tab  -->
-                            <div class="tab-pane fade " id="professional" role="tabpanel" aria-labelledby="professional-tab">
-                                <div class="personal-experience-inner mt--40">
-                                    <div class="row row--40">
-
-                                        <!-- Start Single Progressbar  -->
-                                        <div class="col-lg-6 col-md-6 col-12">
-                                            <div class="progress-wrapper">
-                                                <div class="content">
-                                                    <span class="subtitle">Features</span>
-                                                    <h4 class="maintitle">Design Skill</h4>
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">PHOTOSHOT</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style="width: 100%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                                    class="percent-label">100%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">FIGMA</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay=".4s" role="progressbar" style="width: 95%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                                    class="percent-label">95%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">ADOBE XD</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay=".5s" role="progressbar" style="width: 60%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                                    class="percent-label">60%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">ADOBE ILLUSTRATOR</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".6s" role="progressbar" style="width: 70%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                                    class="percent-label">70%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">DESIGN</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".7s" role="progressbar" style="width: 90%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                                    class="percent-label">90%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Single Progressbar  -->
-
-                                        <!-- Start Single Progressbar  -->
-                                        <div class="col-lg-6 col-md-6 col-12 mt_sm--60">
-                                            <div class="progress-wrapper">
-                                                <div class="content">
-                                                    <span class="subtitle">Features</span>
-                                                    <h4 class="maintitle">Development Skill</h4>
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">HTML</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                                    class="percent-label">85%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">CSS</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay=".4s" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                                    class="percent-label">80%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">JAVASCRIPT</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay=".5s" role="progressbar" style="width: 90%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                                    class="percent-label">90%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">SOFTWARE</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".6s" role="progressbar" style="width: 75%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                                    class="percent-label">75%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">PLUGIN</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".7s" role="progressbar" style="width: 70%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                                    class="percent-label">70%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Single Progressbar  -->
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Tab  -->
-
-                            <!-- Start Single Tab  -->
-                            <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
-                                <div class="personal-experience-inner mt--40">
-                                    <div class="row">
-                                        <!-- Start Skill List Area  -->
-                                        <div class="col-lg-6 col-md-12 col-12">
-                                            <div class="content">
-                                                <span class="subtitle">2007 - 2010</span>
-                                                <h4 class="maintitle">Education Quality</h4>
-                                                <div class="experience-list">
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Personal Portfolio April Fools</h4>
-                                                                    <span>University of DVI (1997 - 2001)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.30/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4> Examples Of Personal Portfolio</h4>
-                                                                    <span>College of Studies (2000 - 2002)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.50/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Maecenas finibus nec sem ut
-                                                                imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Tips For Personal Portfolio</h4>
-                                                                    <span>University of Studies (1997 - 2001)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.80/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description"> If you are going to use a passage. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Skill List Area  -->
-
-                                        <!-- Start Skill List Area 2nd  -->
-                                        <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                                            <div class="content">
-                                                <span class="subtitle">2007 - 2010</span>
-                                                <h4 class="maintitle">Job Experience</h4>
-                                                <div class="experience-list">
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Diploma in Web Development</h4>
-                                                                    <span>BSE In CSE (2004 - 2008)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.70/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>The Personal Portfolio Mystery</h4>
-                                                                    <span>Job at Rainbow-Themes (2008 - 2016)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.95/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Diploma in Computer Science</h4>
-                                                                    <span>Works at Plugin Development (2016 - 2020)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>5.00/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Maecenas finibus nec sem ut
-                                                                imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Skill List Area  -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Tab  -->
-
-                            <!-- Start Single Tab  -->
-                            <div class="tab-pane fade" id="interview" role="tabpanel" aria-labelledby="interview-tab">
-                                <div class="personal-experience-inner mt--40">
-                                    <div class="row">
-                                        <!-- Start Skill List Area  -->
-                                        <div class="col-lg-6 col-md-12 col-12">
-                                            <div class="content">
-                                                <span class="subtitle">2007 - 2010</span>
-                                                <h4 class="maintitle">Education Quality</h4>
-                                                <div class="experience-list">
-
-                                                    <!-- Start Single List  -->
-                                                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Personal Portfolio April Fools</h4>
-                                                                    <span>University of DVI (1997 - 2001)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.30/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4> Examples Of Personal Portfolio</h4>
-                                                                    <span>College of Studies (2000 - 2002)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.50/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Maecenas finibus nec sem ut
-                                                                imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="700" data-aos-once="true" class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Tips For Personal Portfolio</h4>
-                                                                    <span>University of Studies (1997 - 2001)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.80/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description"> If you are going to use a passage. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Skill List Area  -->
-
-                                        <!-- Start Skill List Area 2nd  -->
-                                        <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                                            <div class="content">
-                                                <span class="subtitle">2007 - 2010</span>
-                                                <h4 class="maintitle">Job Experience</h4>
-                                                <div class="experience-list">
-
-                                                    <!-- Start Single List  -->
-                                                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Diploma in Web Development</h4>
-                                                                    <span>BSE In CSE (2004 - 2008)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.70/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="700" data-aos-once="true" class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>The Personal Portfolio Mystery</h4>
-                                                                    <span>Job at Rainbow-Themes (2008 - 2016)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4.95/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="900" data-aos-once="true" class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Diploma in Computer Science</h4>
-                                                                    <span>Works at Plugin Development (2016 - 2020)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>5.00/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">Maecenas finibus nec sem ut
-                                                                imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                                Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                                mauris hendrerit ante.</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Skill List Area  -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Tab  -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Resume Area -->
-
-        <!-- Start Portfolio Area -->
-        <div id="portfolio" class="rn-portfolio-area portfolio-style-three rn-section-gap section-separator">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center">
-                            <span class="subtitle">Visit my portfolio and keep your feedback</span>
-                            <h2 class="title">My Portfolio</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt--25 mt_md--5 mt_sm--5">
-                    <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="portfolio-wrapper portfolio-slick-activation slick-arrow-style-one rn-slick-dot-style">
-
-                            <!-- Start Single Portfolio  -->
-                            <div class="rn-portfolio-slick">
-                                <div class="rn-portfolio" data-toggle="modal" data-target="#exampleModalCenter">
-                                    <div class="inner">
-                                        <div class="thumbnail">
-                                            <a href="javascript:void(0)">
-                                                <img src="assets/images/portfolio/portfolio-06.jpg" alt="Personal Portfolio Images">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="category-info">
-                                                <div class="category-list">
-                                                    <a href="javascript:void(0)">PHOTOSHOP</a>
-                                                </div>
-                                                <div class="meta">
-                                                    <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                                                        650</span>
-                                                </div>
-                                            </div>
-                                            <h4 class="title"><a href="javascript:void(0)">The services provide for design<i
-                                                        class="feather-arrow-up-right"></i></a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Portfolio  -->
-
-                            <!-- Start Single Portfolio  -->
-                            <div class="rn-portfolio-slick">
-                                <div class="rn-portfolio" data-toggle="modal" data-target="#exampleModalCenter">
-                                    <div class="inner">
-                                        <div class="thumbnail">
-                                            <a href="javascript:void(0)">
-                                                <img src="assets/images/portfolio/portfolio-05.jpg" alt="Personal Portfolio Images">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="category-info">
-                                                <div class="category-list">
-                                                    <a href="javascript:void(0)">Figma</a>
-                                                </div>
-                                                <div class="meta">
-                                                    <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                                                        650</span>
-                                                </div>
-                                            </div>
-                                            <h4 class="title"><a href="javascript:void(0)">Mobile app landing design & Services<i
-                                                        class="feather-arrow-up-right"></i></a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Portfolio  -->
-
-                            <!-- Start Single Portfolio  -->
-                            <div class="rn-portfolio-slick">
-                                <div class="rn-portfolio" data-toggle="modal" data-target="#exampleModalCenter">
-                                    <div class="inner">
-                                        <div class="thumbnail">
-                                            <a href="javascript:void(0)">
-                                                <img src="assets/images/portfolio/portfolio-04.jpg" alt="Personal Portfolio Images">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="category-info">
-                                                <div class="category-list">
-                                                    <a href="javascript:void(0)">Laravel</a>
-                                                </div>
-                                                <div class="meta">
-                                                    <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                                                        650</span>
-                                                </div>
-                                            </div>
-                                            <h4 class="title"><a href="javascript:void(0)">Web app Responsive design & Services<i
-                                                        class="feather-arrow-up-right"></i></a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Portfolio  -->
-
-                            <!-- Start Single Portfolio  -->
-                            <div class="rn-portfolio-slick">
-                                <div class="rn-portfolio" data-toggle="modal" data-target="#exampleModalCenter">
-                                    <div class="inner">
-                                        <div class="thumbnail">
-                                            <a href="javascript:void(0)">
-                                                <img src="assets/images/portfolio/portfolio-03.jpg" alt="Personal Portfolio Images">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <div class="category-info">
-                                                <div class="category-list">
-                                                    <a href="javascript:void(0)">Figma</a>
-                                                </div>
-                                                <div class="meta">
-                                                    <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                                                        650</span>
-                                                </div>
-                                            </div>
-                                            <h4 class="title"><a href="javascript:void(0)">PHP with app landing design & Services<i
-                                                        class="feather-arrow-up-right"></i></a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Portfolio  -->
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End portfolio Area -->
-
-        <!-- Start News Area -->
-        <div class="rn-blog-area rn-section-gap section-separator" id="blog">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="section-title text-center">
-                            <span class="subtitle">Visit my blog and keep your feedback</span>
-                            <h2 class="title">My Blog</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row--25 mt--30 mt_md--10 mt_sm--10">
-
-                    <!-- Start Single blog -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
-                        <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
-                            <div class="inner">
-                                <div class="thumbnail">
-                                    <a href="javascript:void(0)">
-                                        <img src="assets/images/blog/blog-01.jpg" alt="Personal Portfolio Images">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <div class="category-info">
-                                        <div class="category-list">
-                                            <a href="javascript:void(0)">Canada</a>
-                                        </div>
-                                        <div class="meta">
-                                            <span><i class="feather-clock"></i> 2 min read</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="javascript:void(0)">T-shirt design is the part of design
-                                            <i class="feather-arrow-up-right"></i></a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single blog -->
-
-                    <!-- Start Single blog -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="600" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
-                        <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
-                            <div class="inner">
-                                <div class="thumbnail">
-                                    <a href="javascript:void(0)">
-                                        <img src="assets/images/blog/blog-02.jpg" alt="Personal Portfolio Images">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <div class="category-info">
-                                        <div class="category-list">
-                                            <a href="javascript:void(0)">Development</a>
-                                        </div>
-                                        <div class="meta">
-                                            <span><i class="feather-clock"></i> 2 hour read</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="javascript:void(0)">The services provide for design <i
-                                        class="feather-arrow-up-right"></i></a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single blog -->
-
-                    <!-- Start Single blog -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="800" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
-                        <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
-                            <div class="inner">
-                                <div class="thumbnail">
-                                    <a href="javascript:void(0)">
-                                        <img src="assets/images/blog/blog-03.jpg" alt="Personal Portfolio Images">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <div class="category-info">
-                                        <div class="category-list">
-                                            <a href="javascript:void(0)">Application</a>
-                                        </div>
-                                        <div class="meta">
-                                            <span><i class="feather-clock"></i> 5 min read</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="javascript:void(0)">Mobile app landing design & app
-                                            maintain<i class="feather-arrow-up-right"></i></a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single blog -->
-
-                </div>
-            </div>
-        </div>
-        <!-- ENd Mews Area -->
-        <!-- Modal Portfolio Body area Start -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i data-feather="x"></i></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row align-items-center">
-
-                            <div class="col-lg-6">
-                                <div class="portfolio-popup-thumbnail">
-                                    <div class="image">
-                                        <img class="w-100" src="assets/images/portfolio/portfolio-04.jpg" alt="slide">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="text-content">
-                                    <h3>
-                                        <span>Featured - Design</span> App Design Development.
-                                    </h3>
-                                    <p class="mb--30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi.</p>
-                                    <p>Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!</p>
-                                    <div class="button-group mt--20">
-                                        <a href="#" class="rn-btn thumbs-icon">
-                                            <span>LIKE THIS</span>
-                                            <i data-feather="thumbs-up"></i>
-                                        </a>
-                                        <a href="#" class="rn-btn">
-                                            <span>VIEW PROJECT</span>
-                                            <i data-feather="chevron-right"></i>
-                                        </a>
-                                    </div>
-
-                                </div>
-                                <!-- End of .text-content -->
-                            </div>
-                        </div>
-                        <!-- End of .row Body-->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Modal Portfolio area -->
-        <!-- Modal Blog Body area Start -->
-        <div class="modal fade" id="exampleModalCenters" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-news" role="document">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i data-feather="x"></i></span>
-                        </button>
-                    </div>
-
-                    <!-- End of .modal-header -->
-
-                    <div class="modal-body">
-                        <img src="assets/images/blog/blog-big-01.jpg" alt="news modal" class="img-fluid modal-feat-img">
-                        <div class="news-details">
-                            <span class="date">2 May, 2021</span>
-                            <h2 class="title">Digital Marketo to Their New Office.</h2>
-                            <p>Nobis eleifend option congue nihil imperdiet doming id quod mazim placerat
-                                facer
-                                possim assum.
-                                Typi non
-                                habent claritatem insitam; est usus legentis in iis qui facit eorum
-                                claritatem.
-                                Investigationes
-                                demonstraverunt
-                                lectores legere me lius quod ii legunt saepius. Claritas est etiam processus
-                                dynamicus, qui
-                                sequitur
-                                mutationem consuetudium lectorum.</p>
-                            <h4>Nobis eleifend option conguenes.</h4>
-                            <p>Mauris tempor, orci id pellentesque convallis, massa mi congue eros, sed
-                                posuere
-                                massa nunc quis
-                                dui.
-                                Integer ornare varius mi, in vehicula orci scelerisque sed. Fusce a massa
-                                nisi.
-                                Curabitur sit
-                                amet
-                                suscipit nisl. Sed eget nisl laoreet, suscipit enim nec, viverra eros. Nunc
-                                imperdiet risus
-                                leo,
-                                in rutrum erat dignissim id.</p>
-                            <p>Ut rhoncus vestibulum facilisis. Duis et lorem vitae ligula cursus venenatis.
-                                Class aptent
-                                taciti sociosqu
-                                ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae
-                                nisi
-                                tortor. Morbi
-                                leo
-                                nulla, posuere vel lectus a, egestas posuere lacus. Fusce eleifend hendrerit
-                                bibendum. Morbi
-                                nec
-                                efficitur ex.</p>
-                            <h4>Mauris tempor, orci id pellentesque.</h4>
-                            <p>Nulla non ligula vel nisi blandit egestas vel eget leo. Praesent fringilla
-                                dapibus dignissim.
-                                Pellentesque
-                                quis quam enim. Vestibulum ultrices, leo id suscipit efficitur, odio lorem
-                                rhoncus dolor, a
-                                facilisis
-                                neque mi ut ex. Quisque tempor urna a nisi pretium, a pretium massa
-                                tristique.
-                                Nullam in
-                                aliquam
-                                diam. Maecenas at nibh gravida, ornare eros non, commodo ligula. Sed
-                                efficitur
-                                sollicitudin
-                                auctor.
-                                Quisque nec imperdiet purus, in ornare odio. Quisque odio felis, vestibulum
-                                et.</p>
-                        </div>
-
-                        <!-- Comment Section Area Start -->
-                        <div class="comment-inner">
-                            <h3 class="title mb--40 mt--50">Leave a Reply</h3>
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group"><input type="text" placeholder="Name">
-                                        </div>
-                                        <div class="rnform-group"><input type="email" placeholder="Email">
-                                        </div>
-                                        <div class="rnform-group"><input type="text" placeholder="Website">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group">
-                                            <textarea placeholder="Comment"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a class="rn-btn" href="#"><span>SUBMIT NOW</span></a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Comment Section End -->
-                    </div>
-                    <!-- End of .modal-body -->
-                </div>
-            </div>
-        </div>
-        <!-- End Modal Blog area -->
-        <!-- Back to  top Start -->
-        <div class="backto-top">
-            <div>
-                <i data-feather="arrow-up"></i>
-            </div>
-        </div>
-        <!-- Back to top end -->
-
-    </main>
-    <!-- Rn footer area Start -->
-    <div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop section-separator">
-        <div class="container pb--80 pb_sm--40 plr_sm--20">
-            <div class="row">
-                <div class="col-xl-3 col-12 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="logo-thumbnail">
-                        <a href="#"><img src="assets/images/logo/logo.png" alt="logo-image"></a>
-                    </div>
-                    <div class="social-icone-wrapper">
-                        <ul class="social-share d-flex liststyle">
-                            <li class="facebook"><a href="#"><i data-feather="linkedin"></i></a>
-                            </li>
-                            <li class="instagram"><a href="#"><i data-feather="instagram"></i></a>
-                            </li>
-                            <li class="linkedin"><a href="#"><i data-feather="twitter"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="menu-wrapper">
-                        <div class="menu-title">
-                            <h6>product</h6>
-                        </div>
-                        <ul class="menu-footer">
-                            <li><a href="#">Database</a></li>
-                            <li><a href="#">Authentication</a></li>
-                            <li><a href="#">Storage</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Pricing</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="menu-wrapper">
-                        <div class="menu-title">
-                            <h6>Resources</h6>
-                        </div>
-                        <ul class="menu-footer">
-                            <li><a href="#">Authentication</a></li>
-                            <li><a href="#">System Status</a></li>
-                            <li><a href="#">Terms of service</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">over right</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="menu-wrapper">
-                        <div class="menu-title">
-                            <h6>Developers</h6>
-                        </div>
-                        <ul class="menu-footer">
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Authentication</a></li>
-                            <li><a href="#">API Reference</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Open Source</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright text-center ptb--40 section-separator">
-            <p class="description">© 2021. All rights reserved by <a target="_blank" href="https://themeforest.net/user/rainbow-themes/portfolio">Rainbow-Themes.</a></p>
-        </div>
-    </div>
-    <!-- Rn footer area end -->
-    <!-- JS ============================================ -->
-    <script src="assets/js/vendor/jquery.js"></script>
-    <script src="assets/js/vendor/modernizer.min.js"></script>
-    <script src="assets/js/vendor/feather.min.js"></script>
-    <script src="assets/js/vendor/slick.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.js"></script>
-    <script src="assets/js/vendor/text-type.js"></script>
-    <script src="assets/js/vendor/wow.js"></script>
-    <script src="assets/js/vendor/aos.js"></script>
-    <script src="assets/js/vendor/particles.js"></script>
-    <!-- main JS -->
-    <script src="assets/js/main.js"></script>
-</body>
-
+    <!-- 
+        This is a place for Alpine.js Teleport feature 
+        @see https://alpinejs.dev/directives/teleport
+      -->
+    <div id="x-teleport-target"></div>
+
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => Alpine.start());
+      document.getElementById('htmlElement').className += "dark";
+      var store = {
+        global: {
+          isDarkModeEnabled: true,
+        }
+      }
+      document.documentElement.classList.add('dark');
+      window.onload = function() {
+        document.documentElement.classList.add('dark');
+      };
+    </script>    
+
+    <script>
+        const scrollableDiv = document.getElementById("scl_box");
+        if (scrollableDiv) {
+          scrollableDiv.addEventListener('wheel', function(e) {
+            // prevent the default vertical scrolling
+            e.preventDefault();
+            // apply the wheel delta to the horizontal scrolling
+            this.scrollLeft += e.deltaY;
+          });
+        }
+    </script>
+
+
+    <script>
+      let altKeyPressed = false;
+      let uKeyPressCount = 0;
+      let cKeyPressCount = 0;
+
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Alt') {
+          altKeyPressed = true;
+        } else if (event.key === 'u' && altKeyPressed) {
+          uKeyPressCount++;
+          if (uKeyPressCount === 1) {
+            document.getElementById('userB').click();
+          } else if (uKeyPressCount === 2) {
+            document.getElementById('userC').click();
+            uKeyPressCount = 0;
+          }
+        }
+
+        if (event.key === 'Alt') {
+          altKeyPressed = true;
+        } else if (event.key === 'c' && altKeyPressed) {
+          cKeyPressCount++;
+          if (cKeyPressCount === 1) {
+            document.getElementById('chatB').click();
+          } else if (cKeyPressCount === 2) {
+            document.getElementById('chatC').click();
+            cKeyPressCount = 0;
+          }
+        }
+      });
+    </script>
+
+    <script>
+      function goTO(id) {
+        var element = document.getElementById(id);
+        var header = document.getElementById('header');
+        var elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        var headerHeight = header.offsetHeight;
+        window.scroll({
+          top: elementPosition - headerHeight,
+          behavior: 'smooth'
+        });
+      }
+    </script>
+
+    <script>
+
+      async function general() {
+        try {
+          const response = await Promise.race([
+            fetch('https://robin-informed-bluebird.ngrok-free.app/general'),
+            new Promise((_, reject) => setTimeout(() => reject(new Error('Request Timeout')), 2000))
+          ]);
+
+          if (response.ok) {
+            const contentType = response.headers.get('content-type');
+            if (contentType && contentType.includes('application/json')) {
+              const jsonData = await response.json();
+              return jsonData;
+              //console.log('JSON Response:', jsonData);
+            } else {
+              //console.log('Non-JSON Response:', await response.text());
+            }
+          } else {
+            //console.error('Error:', response.status, response.statusText);
+          }
+        } catch (error) {
+          //console.error('Error:', error.message);
+        }
+      }
+
+
+      async function update() {
+
+        var elements = document.querySelectorAll('[name="time-now"]');
+        var currentTime = new Date().toLocaleTimeString('en-US', {
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true,
+          timeZone: 'Asia/Dhaka'
+        });
+        elements.forEach(function(element) {
+          element.textContent = currentTime;
+        });
+
+        let gen = await general();
+
+
+
+        if (gen && gen.status) {
+          document.getElementById('dot').setAttribute('x-tooltip.placement.right', "'"+gen.status.tag+"'");
+          document.getElementById('dot-f-d2').innerText = gen.status.title;
+          if (gen.status.tag.toLowerCase() === "online") {
+            document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-success border-2 border-background-color dark:border-navy-700"></div>';
+            document.getElementById('dot-f').classList.value = '';
+            document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-success dark:bg-success/15';
+          } else if (gen.status.tag.toLowerCase() === "offline") {
+            document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-error opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-error border-2 border-background-color dark:border-navy-700"></div>';
+            document.getElementById('dot-f').classList.value = '';
+            document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-error dark:bg-error/15';
+          } else if (gen.status.tag.toLowerCase() === "break") {
+            document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-warning opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-warning border-2 border-background-color dark:border-navy-700"></div>';
+            document.getElementById('dot-f').classList.value = '';
+            document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-warning dark:bg-warning/15';
+          } else if (gen.status.tag.toLowerCase() === "ghost") {
+            document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-primary border-2 border-background-color dark:border-navy-700"></div>';
+            document.getElementById('dot-f').classList.value = '';
+            document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-primary dark:bg-primary/15';
+          }
+        }  else {
+          document.getElementById('dot').setAttribute('x-tooltip.placement.right', "'Ghost'");
+          document.getElementById('dot-f-d2').innerText = "Out of network";
+          document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-primary border-2 border-background-color dark:border-navy-700"></div>';
+          document.getElementById('dot-f').classList.value = '';
+          document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-primary dark:bg-primary/15';
+        }
+
+
+
+        var randomInterval = Math.floor(Math.random() * 5) + 1;
+        setTimeout(update, randomInterval * 1000);
+      }
+
+      window.onload = function() {
+        update();
+      };
+    </script>
+
+  </body>
 </html>
