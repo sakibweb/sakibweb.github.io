@@ -802,13 +802,13 @@
                         Active Time
                       </p>
                       <p class="mt-0.5 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">
-                        <span id="active-t">9898h Time spending</span>
+                        <span id="active-t" name="ac-t-t">9898h Time spending</span>
                       </p>
                     </div>
                   </div>
                   <div class="relative cursor-pointer">
                     <p class="text-xl font-semibold text-slate-700 text-success">
-                      <span id="time-ac">790</span>
+                      <span id="time-ac" name="ac-t">790</span>
                     </p>
                   </div>
                 </div>
@@ -827,13 +827,13 @@
                         Deactive Time
                       </p>
                       <p class="mt-0.5 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">
-                        <span id="deactive-t">9898h Time spending</span>
+                        <span id="deactive-t" name="dc-t-t">9898h Time spending</span>
                       </p>
                     </div>
                   </div>
                   <div class="relative cursor-pointer">
                     <p class="text-xl font-semibold text-slate-700 text-error">
-                      <span id="time-dt">790</span>
+                      <span id="time-dt" name="dc-t">790</span>
                     </p>
                   </div>
                 </div>
@@ -852,13 +852,13 @@
                         Break Time
                       </p>
                       <p class="mt-0.5 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">
-                        <span id="break-t">9898h Time spending</span>
+                        <span id="break-t" name="bk-t-t">9898h Time spending</span>
                       </p>
                     </div>
                   </div>
                   <div class="relative cursor-pointer">
                     <p class="text-xl font-semibold text-slate-700 text-warning">
-                      <span id="time-ts">790</span>
+                      <span id="time-ts" name="bk-t">790</span>
                     </p>
                   </div>
                 </div>
@@ -1559,7 +1559,8 @@
         try {
           const response = await Promise.race([
             fetch('https://robin-informed-bluebird.ngrok-free.app/general'),
-            new Promise((_, reject) => setTimeout(() => reject(new Error('Request Timeout')), 2000))
+            // fetch('http://192.168.1.10/general'),
+            new Promise((_, reject) => setTimeout(() => reject(), 2000))
           ]);
 
           if (response.ok) {
@@ -1575,57 +1576,300 @@
             //console.error('Error:', response.status, response.statusText);
           }
         } catch (error) {
-          //console.error('Error:', error.message);
+          // console.error('Error:', error.message);
         }
       }
 
 
       async function update() {
 
-        var elements = document.querySelectorAll('[name="time-now"]');
+        var time = document.querySelectorAll('[name="time-now"]');
         var currentTime = new Date().toLocaleTimeString('en-US', {
           hour: '2-digit',
           minute: '2-digit',
           hour12: true,
           timeZone: 'Asia/Dhaka'
         });
-        elements.forEach(function(element) {
-          element.textContent = currentTime;
+        time.forEach(function(time) {
+          time.textContent = currentTime;
         });
 
         let gen = await general();
 
-
-
+        let dotST1 = "timeline-item-point rounded-full bg-navy-400";
+        let dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-navy opacity-80"></span>';
+        let pgsbST = 'is-active relative overflow-hidden rounded-full bg-navy-400';
         if (gen && gen.status) {
           document.getElementById('dot').setAttribute('x-tooltip.placement.right', "'"+gen.status.tag+"'");
           document.getElementById('dot-f-d2').innerText = gen.status.title;
+          dotST1 = "timeline-item-point rounded-full bg-navy-400";
+          dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-navy opacity-80"></span>';
+          pgsbST = 'is-active relative overflow-hidden rounded-full bg-navy-400';
           if (gen.status.tag.toLowerCase() === "online") {
             document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-success border-2 border-background-color dark:border-navy-700"></div>';
             document.getElementById('dot-f').classList.value = '';
             document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-success dark:bg-success/15';
+            dotST1 = "timeline-item-point rounded-full bg-success";
+            dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"></span>';
+            pgsbST = 'is-active relative overflow-hidden rounded-full bg-success';
           } else if (gen.status.tag.toLowerCase() === "offline") {
             document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-error opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-error border-2 border-background-color dark:border-navy-700"></div>';
             document.getElementById('dot-f').classList.value = '';
             document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-error dark:bg-error/15';
+            dotST1 = "timeline-item-point rounded-full bg-error";
+            dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-error opacity-80"></span>';
+            pgsbST = 'is-active relative overflow-hidden rounded-full bg-error';
           } else if (gen.status.tag.toLowerCase() === "break") {
             document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-warning opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-warning border-2 border-background-color dark:border-navy-700"></div>';
             document.getElementById('dot-f').classList.value = '';
             document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-warning dark:bg-warning/15';
+            dotST1 = "timeline-item-point rounded-full bg-slate-300 dark:bg-warning";
+            dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-warning opacity-80"></span>';
+            pgsbST = 'is-active relative overflow-hidden rounded-full bg-warning';
           } else if (gen.status.tag.toLowerCase() === "ghost") {
             document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-primary border-2 border-background-color dark:border-navy-700"></div>';
             document.getElementById('dot-f').classList.value = '';
             document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-primary dark:bg-primary/15';
+            dotST1 = "timeline-item-point rounded-full bg-slate-300 dark:bg-primary";
+            dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-primary/15 opacity-80"></span>';
+            pgsbST = 'is-active relative overflow-hidden rounded-full bg-primary/15';
           }
         }  else {
           document.getElementById('dot').setAttribute('x-tooltip.placement.right', "'Ghost'");
           document.getElementById('dot-f-d2').innerText = "Out of network";
           document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-primary border-2 border-background-color dark:border-navy-700"></div>';
           document.getElementById('dot-f').classList.value = '';
-          document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-primary dark:bg-primary/15';
+          document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-primary dark:bg-navy-700';
+          dotST1 = "timeline-item-point rounded-full bg-slate-300 dark:bg-primary";
+          dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-primary/15 opacity-80"></span>';
+          pgsbST = 'is-active relative overflow-hidden rounded-full bg-primary/15';
         }
-
-
+        if (gen && gen.activities) {
+          let pc = document.querySelectorAll('[name="pc"]');
+          pc.forEach(function(pc) {
+            pc.textContent = gen.activities.project;
+          });
+          let mc = document.querySelectorAll('[name="mc"]');
+          mc.forEach(function(mc) {
+            mc.textContent = gen.activities.mission;
+          });
+          let tc = document.querySelectorAll('[name="tc"]');
+          tc.forEach(function(tc) {
+            tc.textContent = gen.activities.task;
+          });
+          let es = document.querySelectorAll('[name="es"]');
+          es.forEach(function(es) {
+            es.textContent = gen.activities.error;
+          });
+          let cs = document.querySelectorAll('[name="cs"]');
+          cs.forEach(function(cs) {
+            cs.textContent = gen.activities.ticket;
+          });
+          let ts = document.querySelectorAll('[name="ts"]');
+          ts.forEach(function(ts) {
+            ts.textContent = gen.activities.time;
+          });
+          let pr = document.querySelectorAll('[name="pr"]');
+          pr.forEach(function(pr) {
+            pr.textContent = gen.activities.rating;
+          });
+          let sr = document.querySelectorAll('[name="sr"]');
+          sr.forEach(function(sr) {
+            sr.textContent = gen.activities.success;
+          });
+        }
+        if (gen && gen.timeline) {
+          let ap = document.querySelectorAll('[name="ap"]');
+          ap.forEach(function(ap) {
+            ap.textContent = gen.timeline.project;
+          });
+          let am = document.querySelectorAll('[name="am"]');
+          am.forEach(function(am) {
+            am.textContent = gen.timeline.mission;
+          });
+          let at = document.querySelectorAll('[name="at"]');
+          at.forEach(function(at) {
+            at.textContent = gen.timeline.task;
+          });
+          let ae = document.querySelectorAll('[name="ae"]');
+          ae.forEach(function(ae) {
+            ae.textContent = gen.timeline.error;
+          });
+          let nt = document.querySelectorAll('[name="nt"]');
+          nt.forEach(function(nt) {
+            nt.textContent = gen.timeline.ticket;
+          });
+          let act = document.querySelectorAll('[name="ac-t"]');
+          act.forEach(function(act) {
+            act.textContent = gen.timeline.active;
+          });
+          let actt = document.querySelectorAll('[name="ac-t-t"]');
+          actt.forEach(function(actt) {
+            actt.textContent = gen.timeline.activeT;
+          });
+          let dct = document.querySelectorAll('[name="dc-t"]');
+          dct.forEach(function(dct) {
+            dct.textContent = gen.timeline.deactive;
+          });
+          let dctt = document.querySelectorAll('[name="dc-t-t"]');
+          dctt.forEach(function(dctt) {
+            dctt.textContent = gen.timeline.deactiveT;
+          });
+          let bkt = document.querySelectorAll('[name="bk-t"]');
+          bkt.forEach(function(bkt) {
+            bkt.textContent = gen.timeline.break;
+          });
+          let bktt = document.querySelectorAll('[name="bk-t-t"]');
+          bktt.forEach(function(bktt) {
+            bktt.textContent = gen.timeline.break;
+          });
+        }
+        if (gen && gen.project) {
+          if (gen && gen.project && gen.project.p1) {
+            document.getElementById('ap1-v').classList.value = '';
+            document.getElementById('ap1-v').classList.value = dotST1;
+            document.getElementById('ap1-v').innerHTML = '';
+            document.getElementById('ap1-v').innerHTML = dotST2;
+            document.getElementById('ap1-p').classList.value = '';
+            document.getElementById('ap1-p').classList.value = pgsbST;
+            document.getElementById('ap1-p').setAttribute('x-tooltip', "'"+gen.project.p1.status+" done'");
+            document.getElementById('ap1-p').style.width = gen.project.p1.status;
+            document.getElementById('ap1-s').innerText = gen.project.p1.tag;
+            document.getElementById('ap1-t').innerText = gen.project.p1.title;
+            document.getElementById('ap1-d').innerText = gen.project.p1.disc;
+          }
+          if (gen && gen.project && gen.project.p2) {
+            document.getElementById('ap2-p').setAttribute('x-tooltip', "'"+gen.project.p2.status+" done'");
+            document.getElementById('ap2-p').style.width = gen.project.p2.status;
+            document.getElementById('ap2-s').innerText = gen.project.p2.tag;
+            document.getElementById('ap2-t').innerText = gen.project.p2.title;
+            document.getElementById('ap2-d').innerText = gen.project.p2.disc;
+          }
+          if (gen && gen.project && gen.project.p3) {
+            document.getElementById('ap3-p').setAttribute('x-tooltip', "'"+gen.project.p3.status+" done'");
+            document.getElementById('ap3-p').style.width = gen.project.p3.status;
+            document.getElementById('ap3-s').innerText = gen.project.p3.tag;
+            document.getElementById('ap3-t').innerText = gen.project.p3.title;
+            document.getElementById('ap3-d').innerText = gen.project.p3.disc;
+          }
+        }
+        if (gen && gen.mission) {
+          if (gen && gen.mission && gen.mission.m1) {
+            document.getElementById('am1-v').classList.value = '';
+            document.getElementById('am1-v').classList.value = dotST1;
+            document.getElementById('am1-v').innerHTML = '';
+            document.getElementById('am1-v').innerHTML = dotST2;
+            document.getElementById('am1-p').classList.value = '';
+            document.getElementById('am1-p').classList.value = pgsbST;
+            document.getElementById('am1-p').setAttribute('x-tooltip', "'"+gen.mission.m1.status+" done'");
+            document.getElementById('am1-p').style.width = gen.mission.m1.status;
+            document.getElementById('am1-s').innerText = gen.mission.m1.tag;
+            document.getElementById('am1-t').innerText = gen.mission.m1.title;
+            document.getElementById('am1-d').innerText = gen.mission.m1.disc;
+          }
+          if (gen && gen.mission && gen.mission.m2) {
+            document.getElementById('am2-p').setAttribute('x-tooltip', "'"+gen.mission.m2.status+" done'");
+            document.getElementById('am2-p').style.width = gen.mission.m2.status;
+            document.getElementById('am2-s').innerText = gen.mission.m2.tag;
+            document.getElementById('am2-t').innerText = gen.mission.m2.title;
+            document.getElementById('am2-d').innerText = gen.mission.m2.disc;
+          }
+          if (gen && gen.mission && gen.mission.m3) {
+            document.getElementById('am3-p').setAttribute('x-tooltip', "'"+gen.mission.m3.status+" done'");
+            document.getElementById('am3-p').style.width = gen.mission.m3.status;
+            document.getElementById('am3-s').innerText = gen.mission.m3.tag;
+            document.getElementById('am3-t').innerText = gen.mission.m3.title;
+            document.getElementById('am3-d').innerText = gen.mission.m3.disc;
+          }
+        }
+        if (gen && gen.task) {
+          if (gen && gen.task && gen.task.t1) {
+            document.getElementById('at1-v').classList.value = '';
+            document.getElementById('at1-v').classList.value = dotST1;
+            document.getElementById('at1-v').innerHTML = '';
+            document.getElementById('at1-v').innerHTML = dotST2;
+            document.getElementById('at1-p').classList.value = '';
+            document.getElementById('at1-p').classList.value = pgsbST;
+            document.getElementById('at1-p').setAttribute('x-tooltip', "'"+gen.task.t1.status+" done'");
+            document.getElementById('at1-p').style.width = gen.task.t1.status;
+            document.getElementById('at1-s').innerText = gen.task.t1.tag;
+            document.getElementById('at1-t').innerText = gen.task.t1.title;
+            document.getElementById('at1-d').innerText = gen.task.t1.disc;
+          }
+          if (gen && gen.task && gen.task.t2) {
+            document.getElementById('at2-p').setAttribute('x-tooltip', "'"+gen.task.t2.status+" done'");
+            document.getElementById('at2-p').style.width = gen.task.t2.status;
+            document.getElementById('at2-s').innerText = gen.task.t2.tag;
+            document.getElementById('at2-t').innerText = gen.task.t2.title;
+            document.getElementById('at2-d').innerText = gen.task.t2.disc;
+          }
+          if (gen && gen.task && gen.task.t3) {
+            document.getElementById('at3-p').setAttribute('x-tooltip', "'"+gen.task.t3.status+" done'");
+            document.getElementById('at3-p').style.width = gen.task.t3.status;
+            document.getElementById('at3-s').innerText = gen.task.t3.tag;
+            document.getElementById('at3-t').innerText = gen.task.t3.title;
+            document.getElementById('at3-d').innerText = gen.task.t3.disc;
+          }
+        }
+        if (gen && gen.error) {
+          if (gen && gen.error && gen.error.e1) {
+            document.getElementById('ae1-v').classList.value = '';
+            document.getElementById('ae1-v').classList.value = dotST1;
+            document.getElementById('ae1-v').innerHTML = '';
+            document.getElementById('ae1-v').innerHTML = dotST2;
+            document.getElementById('ae1-p').classList.value = '';
+            document.getElementById('ae1-p').classList.value = pgsbST;
+            document.getElementById('ae1-p').setAttribute('x-tooltip', "'"+gen.error.e1.status+" done'");
+            document.getElementById('ae1-p').style.width = gen.error.e1.status;
+            document.getElementById('ae1-s').innerText = gen.error.e1.tag;
+            document.getElementById('ae1-t').innerText = gen.error.e1.title;
+            document.getElementById('ae1-d').innerText = gen.error.e1.disc;
+          }
+          if (gen && gen.error && gen.error.e2) {
+            document.getElementById('ae2-p').setAttribute('x-tooltip', "'"+gen.error.e2.status+" done'");
+            document.getElementById('ae2-p').style.width = gen.error.e2.status;
+            document.getElementById('ae2-s').innerText = gen.error.e2.tag;
+            document.getElementById('ae2-t').innerText = gen.error.e2.title;
+            document.getElementById('ae2-d').innerText = gen.error.e2.disc;
+          }
+          if (gen && gen.error && gen.error.e3) {
+            document.getElementById('ae3-p').setAttribute('x-tooltip', "'"+gen.error.e3.status+" done'");
+            document.getElementById('ae3-p').style.width = gen.error.e3.status;
+            document.getElementById('ae3-s').innerText = gen.error.e3.tag;
+            document.getElementById('ae3-t').innerText = gen.error.e3.title;
+            document.getElementById('ae3-d').innerText = gen.error.e3.disc;
+          }
+        }
+        if (gen && gen.ticket) {
+          if (gen && gen.ticket && gen.ticket.p1) {
+            document.getElementById('nt1-v').classList.value = '';
+            document.getElementById('nt1-v').classList.value = dotST1;
+            document.getElementById('nt1-v').innerHTML = '';
+            document.getElementById('nt1-v').innerHTML = dotST2;
+            document.getElementById('nt1-p').classList.value = '';
+            document.getElementById('nt1-p').classList.value = pgsbST;
+            document.getElementById('nt1-p').setAttribute('x-tooltip', "'"+gen.ticket.p1.status+" done'");
+            document.getElementById('nt1-p').style.width = gen.ticket.p1.status;
+            document.getElementById('nt1-s').innerText = gen.ticket.p1.tag;
+            document.getElementById('nt1-t').innerText = gen.ticket.p1.title;
+            document.getElementById('nt1-d').innerText = gen.ticket.p1.disc;
+          }
+          if (gen && gen.ticket && gen.ticket.p2) {
+            document.getElementById('nt2-p').setAttribute('x-tooltip', "'"+gen.ticket.p2.status+" done'");
+            document.getElementById('nt2-p').style.width = gen.ticket.p2.status;
+            document.getElementById('nt2-s').innerText = gen.ticket.p2.tag;
+            document.getElementById('nt2-t').innerText = gen.ticket.p2.title;
+            document.getElementById('nt2-d').innerText = gen.ticket.p2.disc;
+          }
+          if (gen && gen.ticket && gen.ticket.p3) {
+            document.getElementById('nt3-p').setAttribute('x-tooltip', "'"+gen.ticket.p3.status+" done'");
+            document.getElementById('nt3-p').style.width = gen.ticket.p3.status;
+            document.getElementById('nt3-s').innerText = gen.ticket.p3.tag;
+            document.getElementById('nt3-t').innerText = gen.ticket.p3.title;
+            document.getElementById('nt3-d').innerText = gen.ticket.p3.disc;
+          }
+        }
+        
 
         var randomInterval = Math.floor(Math.random() * 5) + 1;
         setTimeout(update, randomInterval * 1000);
