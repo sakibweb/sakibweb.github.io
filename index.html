@@ -786,7 +786,16 @@
 
             <div class="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-x-5 lg:grid-cols-1">
 
-              
+              <div class="avatar h-12 w-full">
+                <div class="is-initial rounded-lg bg-info/10 text-base">
+                  <!-- <i class="fa-solid fa-briefcase text-lg"></i> -->
+                  <p class="text-xs text-slate-400 dark:text-navy-300">&nbsp;Working on:&nbsp;</p>
+                  <span id="wp" class="text-secondary">ISP Gen..</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <span id="wo" class="text-info">Ticket</span>
+                  <!-- <i class="fa-sharp fa-solid fa-cubes-stacked "></i> -->
+                </div>
+              </div>
 
               <div class="card p-3">
                 <div class="flex items-center justify-between space-x-2">
@@ -863,8 +872,6 @@
                   </div>
                 </div>
               </div>
-
-              
 
             </div>
 
@@ -1558,8 +1565,8 @@
       async function general() {
         try {
           const response = await Promise.race([
-            fetch('https://robin-informed-bluebird.ngrok-free.app/general'),
-            // fetch('http://192.168.1.10/general'),
+            // fetch('https://robin-informed-bluebird.ngrok-free.app/general'),
+            fetch('http://192.168.1.10/general'),
             new Promise((_, reject) => setTimeout(() => reject(), 2000))
           ]);
 
@@ -1737,6 +1744,7 @@
             document.getElementById('ap1-s').innerText = gen.project.p1.tag;
             document.getElementById('ap1-t').innerText = gen.project.p1.title;
             document.getElementById('ap1-d').innerText = gen.project.p1.disc;
+            document.getElementById('wp').innerText = gen.project.p1.title;
           }
           if (gen && gen.project && gen.project.p2) {
             document.getElementById('ap2-p').setAttribute('x-tooltip', "'"+gen.project.p2.status+" done'");
@@ -1755,17 +1763,21 @@
         }
         if (gen && gen.mission) {
           if (gen && gen.mission && gen.mission.m1) {
-            document.getElementById('am1-v').classList.value = '';
-            document.getElementById('am1-v').classList.value = dotST1;
-            document.getElementById('am1-v').innerHTML = '';
-            document.getElementById('am1-v').innerHTML = dotST2;
-            document.getElementById('am1-p').classList.value = '';
-            document.getElementById('am1-p').classList.value = pgsbST;
-            document.getElementById('am1-p').setAttribute('x-tooltip', "'"+gen.mission.m1.status+" done'");
-            document.getElementById('am1-p').style.width = gen.mission.m1.status;
-            document.getElementById('am1-s').innerText = gen.mission.m1.tag;
-            document.getElementById('am1-t').innerText = gen.mission.m1.title;
-            document.getElementById('am1-d').innerText = gen.mission.m1.disc;
+            if (condition) {
+              
+            } else {
+              document.getElementById('am1-v').classList.value = '';
+              document.getElementById('am1-v').classList.value = dotST1;
+              document.getElementById('am1-v').innerHTML = '';
+              document.getElementById('am1-v').innerHTML = dotST2;
+              document.getElementById('am1-p').classList.value = '';
+              document.getElementById('am1-p').classList.value = pgsbST;
+              document.getElementById('am1-p').setAttribute('x-tooltip', "'"+gen.mission.m1.status+" done'");
+              document.getElementById('am1-p').style.width = gen.mission.m1.status;
+              document.getElementById('am1-s').innerText = gen.mission.m1.tag;
+              document.getElementById('am1-t').innerText = gen.mission.m1.title;
+              document.getElementById('am1-d').innerText = gen.mission.m1.disc;
+            }
           }
           if (gen && gen.mission && gen.mission.m2) {
             document.getElementById('am2-p').setAttribute('x-tooltip', "'"+gen.mission.m2.status+" done'");
@@ -1868,6 +1880,10 @@
             document.getElementById('nt3-t').innerText = gen.ticket.p3.title;
             document.getElementById('nt3-d').innerText = gen.ticket.p3.disc;
           }
+        }
+        let wkon = "";
+        if (gen && gen.mission && gen.mission.m1 && gen.mission.m1.tag == "Active" && gen.task && gen.task.t1 && gen.task.t1.tag == "Active") {
+          
         }
         
 
