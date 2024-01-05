@@ -1565,8 +1565,8 @@
       async function general() {
         try {
           const response = await Promise.race([
-            // fetch('https://robin-informed-bluebird.ngrok-free.app/general'),
-            fetch('http://192.168.1.10/general'),
+            fetch('https://robin-informed-bluebird.ngrok-free.app/general'),
+            // fetch('http://192.168.1.10/general'),
             new Promise((_, reject) => setTimeout(() => reject(), 2000))
           ]);
 
