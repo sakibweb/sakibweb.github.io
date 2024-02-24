@@ -1674,7 +1674,7 @@
 		<div id="x-teleport-target"></div>
     <script>
       window.addEventListener("DOMContentLoaded", () => Alpine.start());
-      document.getElementById('htmlElement').className += "dark";
+      document.getElementById('htmlElement').className = "dark";
       var store = {
         global: {
           isDarkModeEnabled: true,
@@ -2078,6 +2078,9 @@
       window.onload = function() {
         update();
       };
+    </script>
+    <script>
+	document.getElementById('htmlElement').className = "dark";
     </script>
 	</body>
 </html>
