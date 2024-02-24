@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="htmlElement" lang="en" class="dark ">
+<html id="htmlElement" lang="en" class="dark">
 	<head>
 		<!-- Meta tags  -->
 		<meta charset="UTF-8" />
@@ -1674,15 +1674,15 @@
 		<div id="x-teleport-target"></div>
     <script>
       window.addEventListener("DOMContentLoaded", () => Alpine.start());
-      document.getElementById('htmlElement').className = "dark";
+      document.getElementById('htmlElement').className = " dark";
       var store = {
         global: {
           isDarkModeEnabled: true,
         }
       }
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add(' dark');
       window.onload = function() {
-        document.documentElement.classList.add('dark');
+        document.documentElement.classList.add(' dark');
       };
     </script>    
 
@@ -2080,7 +2080,7 @@
       };
     </script>
     <script>
-	document.getElementById('htmlElement').className = "dark";
+	document.getElementById('htmlElement').className += " dark";
     </script>
 	</body>
 </html>
