@@ -46,22 +46,6 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
-		<style>
-			@media screen and (max-width: 640px) {
-				.tag-mobile-hidden {
-					display: none;
-				}
-			}
-
-			@media (min-width: 992px) {
-				.tag-pc-hidden {
-					display: none !important;
-				}
-			}
-		</style>
-		<script>
-			localStorage.getItem("_x_darkMode_on") === "true" && document.documentElement.classList.add("dark");
-		</script>
 		<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -273,8 +257,8 @@
 							<p class="w-auto text-center text-slate-400 dark:text-navy-300">
 								<!-- <div> -->
 								<span class="absolute h-4 w-4 justify-center">
-									<span id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-20"></span>
-									<i id="dot-d2" class="fa-solid fa-user-tie text-success inline-flex h-4 w-4 dark:border-navy-700"></i>
+									<span id="dot-d1-C" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-20"></span>
+									<i id="dot-d2-C" class="fa-solid fa-user-tie text-success inline-flex h-4 w-4 dark:border-navy-700"></i>
 								</span>
 								<!-- </div> -->
 								<i class="fa-solid fa-user-tie text-transparent justify-center">&nbsp;</i>
@@ -411,22 +395,9 @@
 				<div class="col-span-12 lg:col-span-8">
 					<div class="flex flex-col sm:flex-row sm:space-x-7">
 						<div class="ax-transparent-gridline grid w-full grid-cols-1 tag-mobile-hidden">
-							<!-- <img class="mt-5 h-80 w-full rounded-lg object-cover object-center" src="images/800x600.png" alt="image"> -->
 							<h3 class="text-s font-medium text-center w-full text-slate-700 dark:text-navy-100"> SakibWeb - Full-stack Development </h3>
 							<div x-init="$nextTick(() => $el._x_swiper = new Swiper($el,{effect: 'cards', grabCursor: true, autoplay: {delay: 2000}}))" class="swiper h-80 w-full rounded-lg object-cover object-center">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img class="h-full w-full rounded-lg object-cover" src="images/800x600.png" alt="" />
-									</div>
-									<div class="swiper-slide">
-										<img class="h-full w-full rounded-lg object-cover" src="images/800x600.png" alt="" />
-									</div>
-									<div class="swiper-slide">
-										<img class="h-full w-full rounded-lg object-cover" src="images/800x600.png" alt="" />
-									</div>
-									<div class="swiper-slide">
-										<img class="h-full w-full rounded-lg object-cover" src="images/800x600.png" alt="" />
-									</div>
 								</div>
 							</div>
 						</div>
@@ -439,8 +410,8 @@
 										<div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-success border-2 border-background-color dark:border-navy-700"></div>
 									</div>
 								</div>
-								<h3 class="pt-3 text-lg font-medium text-slate-700 dark:text-navy-100"> Sakibur Rahman </h3>
-								<p class="text-xs+">Full-stack Developer</p>
+								<h3 class="pt-3 text-lg font-medium text-slate-700 dark:text-navy-100" id="profile-name"> Sakibur Rahman </h3>
+								<p class="text-xs+" id="profile-tagline">Full-stack Developer</p>
 								<p class="text-xs+ text-center justify-center items-center" title="Award Level 1">Since 2018 <img x-tooltip="'Award Level 1'" class="h-4 w-4 inline-block" src="images/awards/award-19.svg" alt="avatar">
 								</p>
 								<div id="dot-f" class="badge space-x-2.5 mt-2 rounded-full text-success dark:bg-success/15">
@@ -496,7 +467,7 @@
 						<div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
 							<div class="flex justify-between space-x-1">
 								<p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
-									<span id="tp-pc" name="pc">375</span>
+									<span id="tp-pro" name="pc">0</span>
 								</p>
 								<i class="fa-sharp fa-solid fa-bars-progress text-primary text-lg"></i>
 							</div>
@@ -505,7 +476,7 @@
 						<div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
 							<div class="flex justify-between">
 								<p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
-									<span id="tp-mc" name="mc">12.6K</span>
+									<span id="tp-mis" name="mc">0</span>
 								</p>
 								<i class="fa-sharp fa-solid fa-cubes-stacked text-secondary text-lg"></i>
 							</div>
@@ -514,7 +485,7 @@
 						<div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
 							<div class="flex justify-between">
 								<p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
-									<span id="tp-tc" name="tc">143</span>
+									<span id="tp-tas" name="tc">0</span>
 								</p>
 								<i class="fa-sharp fa-solid fa-list-check text-info text-lg"></i>
 							</div>
@@ -523,7 +494,7 @@
 						<div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
 							<div class="flex justify-between">
 								<p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
-									<span id="tp-es" name="es">651</span>
+									<span id="tp-com" name="es">0</span>
 								</p>
 								<i class="fa-sharp fa-solid fa-bug text-success text-lg"></i>
 							</div>
@@ -532,7 +503,7 @@
 						<div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
 							<div class="flex justify-between space-x-1">
 								<p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
-									<span id="tp-cs" name="cs">460</span>
+									<span id="tp-cha" name="cs">0</span>
 								</p>
 								<i class="fa-sharp fa-solid fa-ticket text-error text-lg"></i>
 							</div>
@@ -541,7 +512,7 @@
 						<div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
 							<div class="flex justify-between">
 								<p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
-									<span id="tp-ts" name="ts">460</span>
+									<span id="tp-tim" name="ts">0</span>
 								</p>
 								<i class="fa-sharp fa-solid fa-business-time text-warning text-lg"></i>
 							</div>
@@ -550,7 +521,7 @@
 						<div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
 							<div class="flex justify-between space-x-1">
 								<p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
-									<span id="tp-pr" name="pr">460</span>
+									<span id="tp-per" name="pr">0</span>
 								</p>
 								<i class="fa-sharp fa-solid fa-person-running text-navy-400 text-lg"></i>
 							</div>
@@ -559,7 +530,7 @@
 						<div class="rounded-lg bg-slate-150 p-4 dark:bg-navy-700">
 							<div class="flex justify-between">
 								<p class="text-xl font-semibold text-slate-700 dark:text-navy-100">
-									<span id="tp-sr" name="sr">460</span>
+									<span id="tp-suc" name="sr">0</span>
 								</p>
 								<i class="fa-sharp fa-solid fa-thumbs-up text-slate-150 text-lg"></i>
 							</div>
@@ -574,18 +545,17 @@
         <div class="grid grid-cols-12 gap-4 bg-slate-150 py-5 dark:bg-navy-800 sm:mt-3 sm:gap-5 lg:mt-3 lg:gap-6">
           <div class="col-span-12 flex flex-col px-[var(--margin-x)] transition-all duration-[.25s] lg:col-span-3 lg:pr-0">
             <h1 class="text-base text-xl font-semibold tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100 lg:text-xl text-center">
-              <span id="time-now" name="time-now">10:30pm</span>
+              <span id="time-now" name="time-now"></span>
             </h1>
-            <p class="text-s text-slate-700 dark:text-navy-100 text-center"> Daily 11:00am - 11:00pm </p>
+            <p class="text-s text-slate-700 dark:text-navy-100 text-center" id="DailyToT"></p>
             <div class="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-x-5 lg:grid-cols-1">
               <div class="avatar h-12 w-full">
                 <div class="is-initial rounded-lg bg-info/10 text-base">
                   <!-- <i class="fa-solid fa-briefcase text-lg"></i> -->
                   <p class="text-xs text-slate-400 dark:text-navy-300">&nbsp;Working on:&nbsp;</p>
-                  <span id="wp" class="text-secondary">ISP Gen..</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                  <span id="wo" class="text-info">Ticket</span>
-                  <!-- <i class="fa-sharp fa-solid fa-cubes-stacked "></i> -->
+                  <span id="wp" class="text-secondary">ISP Gen..</span>&nbsp;
+                  <i class="fa-solid fa-arrow-right"></i>&nbsp;
+                  <span id="wo" class=""></span>
                 </div>
               </div>
               <div class="card p-3">
@@ -599,13 +569,13 @@
                     <div>
                       <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"> Active Time </p>
                       <p class="mt-0.5 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">
-                        <span id="active-t" name="ac-t-t">9898h Time spending</span>
+                        <span id="active-t" name="ac-t-t">0m Time spending</span>
                       </p>
                     </div>
                   </div>
                   <div class="relative cursor-pointer">
                     <p class="text-xl font-semibold text-slate-700 text-success">
-                      <span id="time-ac" name="ac-t">790</span>
+                      <span id="time-ac" name="ac-t">0m</span>
                     </p>
                   </div>
                 </div>
@@ -621,13 +591,13 @@
                     <div>
                       <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"> Deactive Time </p>
                       <p class="mt-0.5 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">
-                        <span id="deactive-t" name="dc-t-t">9898h Time spending</span>
+                        <span id="deactive-t" name="dc-t-t">0m Time spending</span>
                       </p>
                     </div>
                   </div>
                   <div class="relative cursor-pointer">
                     <p class="text-xl font-semibold text-slate-700 text-error">
-                      <span id="time-dt" name="dc-t">790</span>
+                      <span id="time-dt" name="dc-t">0m</span>
                     </p>
                   </div>
                 </div>
@@ -643,13 +613,13 @@
                     <div>
                       <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"> Break Time </p>
                       <p class="mt-0.5 text-xs text-slate-400 line-clamp-1 dark:text-navy-300">
-                        <span id="break-t" name="bk-t-t">9898h Time spending</span>
+                        <span id="break-t" name="bk-t-t">0m Time spending</span>
                       </p>
                     </div>
                   </div>
                   <div class="relative cursor-pointer">
                     <p class="text-xl font-semibold text-slate-700 text-warning">
-                      <span id="time-ts" name="bk-t">790</span>
+                      <span id="time-ts" name="bk-t">0m</span>
                     </p>
                   </div>
                 </div>
@@ -671,7 +641,7 @@
             </div>
           </div>
           <div class="is-scrollbar-hidden col-span-12 flex space-x-4 overflow-x-scroll px-[var(--margin-x)] -right-px[var(--margin-x)] transition-all duration-[.25s] lg:col-span-9 lg:pl-0" id="scl_box" style="overflow-x: scroll; padding-right: var(--margin-x);">
-            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5">
+            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5" id="available-project">
               <div class="flex items-center justify-between space-x-2">
                 <div class="flex items-center space-x-3">
                   <div class="avatar h-12 w-12">
@@ -682,81 +652,21 @@
                   <div>
                     <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"> Available Project </p>
                     <p class="text-xs text-slate-400 dark:text-navy-300">
-                      <span id="tm-pc" name="pc">375</span> Completed
+                      <span id="available-project-co">0</span> Completed
                     </p>
                   </div>
                 </div>
                 <div class="flex space-x-2">
                   <div class="relative cursor-pointer">
                     <p class="text-xl font-semibold text-slate-700 text-secondary">
-                      <span id="tm-ap" name="ap">790</span>
+                      <span id="available-project-av">0</span> 
                     </p>
                   </div>
                 </div>
               </div>
-              <ol class="timeline line-space max-w-sm">
-                <li class="timeline-item">
-                  <div id="ap1-v" class="timeline-item-point rounded-full bg-success">
-                    <span class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"></span>
-                  </div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="ap1-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="ap1-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="ap1-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="ap1-p" x-tooltip="'59% done'" class="is-active relative overflow-hidden rounded-full bg-success" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item">
-                  <div id="ap2-v" class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"></div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="ap2-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="ap2-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="ap2-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="ap2-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item">
-                  <div id="ap3-v" class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"></div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="ap3-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="ap3-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="ap3-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="ap3-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-              </ol>
+              <ol class="timeline line-space max-w-sm"></ol>
             </div>
-            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5">
+            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5" id="available-mission">
               <div class="flex items-center justify-between space-x-2">
                 <div class="flex items-center space-x-3">
                   <div class="avatar h-12 w-12">
@@ -767,81 +677,21 @@
                   <div>
                     <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"> Available Mission </p>
                     <p class="text-xs text-slate-400 dark:text-navy-300">
-                      <span id="tm-mc" name="mc">375</span> Completed
+                      <span id="available-mission-co">0</span> Completed
                     </p>
                   </div>
                 </div>
                 <div class="flex space-x-2">
                   <div class="relative cursor-pointer">
                     <p class="text-xl font-semibold text-slate-700 text-info">
-                      <span id="tm-am" name="am">790</span>
+                      <span id="available-mission-av">0</span> 
                     </p>
                   </div>
                 </div>
               </div>
-              <ol class="timeline line-space max-w-sm">
-                <li class="timeline-item">
-                  <div id="am1-v" class="timeline-item-point rounded-full bg-success">
-                    <span class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"></span>
-                  </div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="am1-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="am1-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="am1-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="am1-p" x-tooltip="'59% done'" class="is-active relative overflow-hidden rounded-full bg-success" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item">
-                  <div id="am2-v" class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"></div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="am2-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="am2-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="am2-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="am2-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item">
-                  <div id="am3-v" class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"></div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="am3-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="am3-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="am3-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="am3-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-              </ol>
+              <ol class="timeline line-space max-w-sm"></ol>
             </div>
-            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5">
+            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5" id="available-task">
               <div class="flex items-center justify-between space-x-2">
                 <div class="flex items-center space-x-3">
                   <div class="avatar h-12 w-12">
@@ -852,81 +702,21 @@
                   <div>
                     <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"> Available Task </p>
                     <p class="text-xs text-slate-400 dark:text-navy-300">
-                      <span id="tm-mc" name="mc">375</span> Completed
+                      <span id="available-task-co">0</span> Completed
                     </p>
                   </div>
                 </div>
                 <div class="flex space-x-2">
                   <div class="relative cursor-pointer">
                     <p class="text-xl font-semibold text-slate-700 text-success">
-                      <span id="tm-at" name="at">790</span>
+                      <span id="available-task-av">0</span> 
                     </p>
                   </div>
                 </div>
               </div>
-              <ol class="timeline line-space max-w-sm">
-                <li class="timeline-item">
-                  <div id="at1-v" class="timeline-item-point rounded-full bg-success">
-                    <span class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"></span>
-                  </div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="at1-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="at1-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="at1-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="at1-p" x-tooltip="'59% done'" class="is-active relative overflow-hidden rounded-full bg-success" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item">
-                  <div id="at2-v" class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"></div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="at2-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="at2-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="at2-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="at2-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item">
-                  <div id="at3-v" class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"></div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="at3-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="at3-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="at3-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="at3-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-              </ol>
+              <ol class="timeline line-space max-w-sm"></ol>
             </div>
-            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5">
+            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5" id="available-error">
               <div class="flex items-center justify-between space-x-2">
                 <div class="flex items-center space-x-3">
                   <div class="avatar h-12 w-12">
@@ -937,80 +727,21 @@
                   <div>
                     <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"> Available Error </p>
                     <p class="text-xs text-slate-400 dark:text-navy-300">
-                      <span id="tm-es" name="es">375</span> solved
+                      <span id="available-error-co">0</span> solved
                     </p>
                   </div>
                 </div>
                 <div class="flex space-x-2">
                   <div class="relative cursor-pointer">
                     <p class="text-xl font-semibold text-slate-700 text-error">
-                      <span id="tm-ae" name="ae">790</span>
+                      <span id="available-error-av">0</span> 
                     </p>
                   </div>
                 </div>
               </div>
-              <ol class="timeline line-space max-w-sm">
-                <li class="timeline-item">
-                  <div id="ae1-v" class="timeline-item-point rounded-full bg-success">
-                    <span class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"></span>
-                  </div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="ae1-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="ae1-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="ae1-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="ae1-p" x-tooltip="'59% done'" class="is-active relative overflow-hidden rounded-full bg-success" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item">
-                  <div id="ae2-v" class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"></div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="ae2-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="ae2-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="ae2-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="ae2-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item">
-                  <div id="ae3-v" class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"></div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="ae3-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="ae3-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="ae3-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="ae3-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
-                    </div>
-                  </div>
-              </ol>
+              <ol class="timeline line-space max-w-sm"></ol>
             </div>
-            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5">
+            <div class="card w-72 shrink-0 space-y-9 rounded-xl p-4 sm:px-5" id="available-ticket">
               <div class="flex items-center justify-between space-x-2">
                 <div class="flex items-center space-x-3">
                   <div class="avatar h-12 w-12">
@@ -1021,78 +752,19 @@
                   <div>
                     <p class="font-medium text-slate-700 line-clamp-1 dark:text-navy-100"> Available Ticket </p>
                     <p class="text-xs text-slate-400 dark:text-navy-300">
-                      <span id="tm-cs" name="cs">375</span> solved
+                      <span id="available-ticket-co">0</span> solved
                     </p>
                   </div>
                 </div>
                 <div class="flex space-x-2">
                   <div class="relative cursor-pointer">
                     <p class="text-xl font-semibold text-slate-700 text-warning">
-                      <span id="tm-nt" name="nt">790</span>
+                      <span id="available-ticket-av">0</span> 
                     </p>
                   </div>
                 </div>
               </div>
-              <ol class="timeline line-space max-w-sm">
-                <li class="timeline-item">
-                  <div id="nt1-v" class="timeline-item-point rounded-full bg-success">
-                    <span class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"></span>
-                  </div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="nt1-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="nt1-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="nt1-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="nt1-p" x-tooltip="'59% done'" class="is-active relative overflow-hidden rounded-full bg-success" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item">
-                  <div id="nt2-v" class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"></div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="nt2-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="nt2-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="nt2-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="nt2-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-item">
-                  <div id="nt3-v" class="timeline-item-point rounded-full bg-slate-300 dark:bg-navy-400"></div>
-                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                        <span id="nt3-t">ISP Gen...</span>
-                      </p>
-                      <span class="text-xs text-slate-400 dark:text-navy-300">
-                        <span id="nt3-s">Acctive</span>
-                      </span>
-                    </div>
-                    <p class="py-1 line-clamp-3">
-                      <span id="nt3-d">Robert Nolan completed the design of the CRM application</span>
-                    </p>
-                    <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
-                      <div id="nt3-p" x-tooltip="'59% done'" class="rounded-full bg-slate-500 dark:bg-navy-400" style="width: 59%;"></div>
-                    </div>
-                  </div>
-              </ol>
+              <ol class="timeline line-space max-w-sm"></ol>
             </div>
           </div>
         </div>
@@ -1126,38 +798,6 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td class="whitespace-nowrap border border-l-0 border-slate-200 px-3 py-3 dark:border-navy-500">Professional Graphics Design With Internship</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">Graphics Design - Advance</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">Sheikh Kamal IT Training & Incubation Center</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">Natore, Rajshahi</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">2020(Jan-Jun)</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">GDB116</td>
-                          </tr>
-                          <tr>
-                            <td class="whitespace-nowrap border border-l-0 border-slate-200 px-3 py-3 dark:border-navy-500">Mobile Game And Application Project</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">JAVA, Android development</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">Sheikh Kamal IT Training & Incubation Center</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">Natore, Rajshahi</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">2018(May-Nov)</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">L1A-B-39-0-22</td>
-                          </tr>
-                          <tr>
-                            <td class="whitespace-nowrap border border-l-0 border-slate-200 px-3 py-3 dark:border-navy-500">Graphics Design</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">Beginner to Mid Level</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">Sheikh Kamal IT Training & Incubation Center</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">Natore, Rajshahi</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">2018(Mar-June)</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">GD-06-245-17</td>
-                          </tr>
-                          <tr>
-                            <td class="whitespace-nowrap border border-b-0 border-l-0 border-slate-200 px-3 py-3 dark:border-navy-500">National Skill Standard Basic Course</td>
-                            <td class="whitespace-nowrap border border-b-0 border-slate-200 px-3 py-3 dark:border-navy-500">Database Programming</td>
-                            <td class="whitespace-nowrap border border-b-0 border-slate-200 px-3 py-3 dark:border-navy-500">Technical Training Institute</td>
-                            <td class="whitespace-nowrap border border-b-0 border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">Natore, Rajshahi</td>
-                            <td class="whitespace-nowrap border border-b-0 border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">2018(Jan-Jun)</td>
-                            <td class="whitespace-nowrap border border-b-0 border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">3000036037</td>
-                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -1290,30 +930,6 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td class="whitespace-nowrap border border-l-0 border-slate-200 px-3 py-3 dark:border-navy-500">Bachelor of Science(BSc)</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">Geography and Environment</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">Shahid Shamsuzzoha College</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">2112351</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">Appeared</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">2017</td>
-                          </tr>
-                          <tr>
-                            <td class="whitespace-nowrap border border-l-0 border-slate-200 px-3 py-3 dark:border-navy-500">Higher Secondary Certificate(HSC)</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">Business Studies</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">Shahid Nazmul Haque College</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">505712</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">2nd Division</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">2016</td>
-                          </tr>
-                          <tr>
-                            <td class="whitespace-nowrap border border-l-0 border-slate-200 px-3 py-3 dark:border-navy-500">Secondary School Certificate(SSC)</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">Humanities</td>
-                            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">Naldanga High School</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">520911</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">2nd Division</td>
-                            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">2014</td>
-                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -1718,11 +1334,7 @@
           isDarkModeEnabled: true,
         }
       }
-      document.documentElement.classList.add(' dark');
-      window.onload = function() {
-        document.documentElement.classList.add(' dark');
-      };
-    </script>    
+    </script>
 
     <script>
       function addHorizontalScrolling(elementId) {
@@ -1777,346 +1389,453 @@
       function goTO(id) {
         var element = document.getElementById(id);
         var header = document.getElementById('header');
-        var elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-        var headerHeight = header.offsetHeight;
-        window.scroll({
-          top: elementPosition - headerHeight,
-          behavior: 'smooth'
-        });
+        if (element) {
+          var elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          var headerHeight = header.offsetHeight;
+          if (headerHeight <= 0 || headerHeight < 20) {
+            headerHeight = 60;
+          }
+          window.scroll({
+            top: elementPosition - headerHeight,
+            behavior: 'smooth',
+            block: 'start'
+          });          
+        }
       }
     </script>
 
+
     <script>
-
-      async function general() {
-        try {
-          const response = await Promise.race([
-            fetch('https://robin-informed-bluebird.ngrok-free.app/general'),
-            // fetch('http://192.168.1.10/general'),
-            new Promise((_, reject) => setTimeout(() => reject(), 2000))
-          ]);
-
-          if (response.ok) {
-            const contentType = response.headers.get('content-type');
-            if (contentType && contentType.includes('application/json')) {
-              const jsonData = await response.json();
-              return jsonData;
-              //console.log('JSON Response:', jsonData);
-            } else {
-              //console.log('Non-JSON Response:', await response.text());
-            }
-          } else {
-            //console.error('Error:', response.status, response.statusText);
-          }
-        } catch (error) {
-          // console.error('Error:', error.message);
-        }
+      const currentHash = window.location.hash;
+      if (currentHash) {
+        const sectionId = currentHash.substring(1);
+        // window.history.replaceState(null, null, window.location.pathname);
+        goTO(sectionId);
       }
+    </script>
 
 
-      async function update() {
 
-        var time = document.querySelectorAll('[name="time-now"]');
-        var currentTime = new Date().toLocaleTimeString('en-US', {
+
+
+
+<script>
+const timelineJSON = "https://raw.githubusercontent.com/sakibweb/sakibweb.github.io-data/main/timeline.json";
+
+async function timelineData() {
+    try {
+        const response = await fetch(timelineJSON);
+
+        if (!response.ok) {
+            throw new Error(`Error fetching data: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+
+        // Time Now Update
+        const timeElements = document.querySelectorAll('[name="time-now"]');
+        const currentTime = new Date().toLocaleTimeString('en-US', {
           hour: '2-digit',
           minute: '2-digit',
           hour12: true,
           timeZone: 'Asia/Dhaka'
         });
-        time.forEach(function(time) {
-          time.textContent = currentTime;
+        timeElements.forEach(function (time) {
+            time.textContent = currentTime;
         });
 
-        let gen = await general();
+        // Update Daily Time
+        const dailyTimeElement = document.getElementById("DailyToT");
+        if (dailyTimeElement) {
+            dailyTimeElement.innerText = data.daily_time;
+        }
 
-        let dotST1 = "timeline-item-point rounded-full bg-navy-400";
-        let dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-navy opacity-80"></span>';
-        let pgsbST = 'is-active relative overflow-hidden rounded-full bg-navy-400';
-        if (gen && gen.status) {
-          document.getElementById('dot').setAttribute('x-tooltip.placement.right', "'"+gen.status.tag+"'");
-          document.getElementById('dot-f-d2').innerText = gen.status.title;
-          dotST1 = "timeline-item-point rounded-full bg-navy-400";
-          dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-navy opacity-80"></span>';
-          pgsbST = 'is-active relative overflow-hidden rounded-full bg-navy-400';
-          if (gen.status.tag.toLowerCase() === "online") {
-            document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-success border-2 border-background-color dark:border-navy-700"></div>';
-            document.getElementById('dot-f').classList.value = '';
-            document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-success dark:bg-success/15';
-            dotST1 = "timeline-item-point rounded-full bg-success";
-            dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"></span>';
-            pgsbST = 'is-active relative overflow-hidden rounded-full bg-success';
-          } else if (gen.status.tag.toLowerCase() === "offline") {
-            document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-error opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-error border-2 border-background-color dark:border-navy-700"></div>';
-            document.getElementById('dot-f').classList.value = '';
-            document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-error dark:bg-error/15';
-            dotST1 = "timeline-item-point rounded-full bg-error";
-            dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-error opacity-80"></span>';
-            pgsbST = 'is-active relative overflow-hidden rounded-full bg-error';
-          } else if (gen.status.tag.toLowerCase() === "break") {
-            document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-warning opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-warning border-2 border-background-color dark:border-navy-700"></div>';
-            document.getElementById('dot-f').classList.value = '';
-            document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-warning dark:bg-warning/15';
-            dotST1 = "timeline-item-point rounded-full bg-slate-300 dark:bg-warning";
-            dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-warning opacity-80"></span>';
-            pgsbST = 'is-active relative overflow-hidden rounded-full bg-warning';
-          } else if (gen.status.tag.toLowerCase() === "ghost") {
-            document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-primary border-2 border-background-color dark:border-navy-700"></div>';
-            document.getElementById('dot-f').classList.value = '';
-            document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-primary dark:bg-primary/15';
-            dotST1 = "timeline-item-point rounded-full bg-slate-300 dark:bg-primary";
-            dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-primary/15 opacity-80"></span>';
-            pgsbST = 'is-active relative overflow-hidden rounded-full bg-primary/15';
-          }
-        }  else {
-          document.getElementById('dot').setAttribute('x-tooltip.placement.right', "'Ghost'");
-          document.getElementById('dot-f-d2').innerText = "Out of network";
-          document.getElementById('dot').innerHTML = '<div id="dot-d1" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-20"></div><div id="dot-d2" class="inline-flex h-4 w-4 rounded-full bg-primary border-2 border-background-color dark:border-navy-700"></div>';
-          document.getElementById('dot-f').classList.value = '';
-          document.getElementById('dot-f').classList.value = 'badge space-x-2.5 mt-2 rounded-full text-primary dark:bg-navy-700';
-          dotST1 = "timeline-item-point rounded-full bg-slate-300 dark:bg-primary";
-          dotST2 = '<span class="inline-flex h-full w-full animate-ping rounded-full bg-primary/15 opacity-80"></span>';
-          pgsbST = 'is-active relative overflow-hidden rounded-full bg-primary/15';
+        // Update Working Project and Type
+        const workingProjectElement = document.getElementById('wp');
+        if (workingProjectElement) {
+            workingProjectElement.textContent = data.working_on.working_project;
         }
-        if (gen && gen.activities) {
-          let pc = document.querySelectorAll('[name="pc"]');
-          pc.forEach(function(pc) {
-            pc.textContent = gen.activities.project;
-          });
-          let mc = document.querySelectorAll('[name="mc"]');
-          mc.forEach(function(mc) {
-            mc.textContent = gen.activities.mission;
-          });
-          let tc = document.querySelectorAll('[name="tc"]');
-          tc.forEach(function(tc) {
-            tc.textContent = gen.activities.task;
-          });
-          let es = document.querySelectorAll('[name="es"]');
-          es.forEach(function(es) {
-            es.textContent = gen.activities.error;
-          });
-          let cs = document.querySelectorAll('[name="cs"]');
-          cs.forEach(function(cs) {
-            cs.textContent = gen.activities.ticket;
-          });
-          let ts = document.querySelectorAll('[name="ts"]');
-          ts.forEach(function(ts) {
-            ts.textContent = gen.activities.time;
-          });
-          let pr = document.querySelectorAll('[name="pr"]');
-          pr.forEach(function(pr) {
-            pr.textContent = gen.activities.rating;
-          });
-          let sr = document.querySelectorAll('[name="sr"]');
-          sr.forEach(function(sr) {
-            sr.textContent = gen.activities.success;
-          });
-        }
-        if (gen && gen.timeline) {
-          let ap = document.querySelectorAll('[name="ap"]');
-          ap.forEach(function(ap) {
-            ap.textContent = gen.timeline.project;
-          });
-          let am = document.querySelectorAll('[name="am"]');
-          am.forEach(function(am) {
-            am.textContent = gen.timeline.mission;
-          });
-          let at = document.querySelectorAll('[name="at"]');
-          at.forEach(function(at) {
-            at.textContent = gen.timeline.task;
-          });
-          let ae = document.querySelectorAll('[name="ae"]');
-          ae.forEach(function(ae) {
-            ae.textContent = gen.timeline.error;
-          });
-          let nt = document.querySelectorAll('[name="nt"]');
-          nt.forEach(function(nt) {
-            nt.textContent = gen.timeline.ticket;
-          });
-          let act = document.querySelectorAll('[name="ac-t"]');
-          act.forEach(function(act) {
-            act.textContent = gen.timeline.active;
-          });
-          let actt = document.querySelectorAll('[name="ac-t-t"]');
-          actt.forEach(function(actt) {
-            actt.textContent = gen.timeline.activeT;
-          });
-          let dct = document.querySelectorAll('[name="dc-t"]');
-          dct.forEach(function(dct) {
-            dct.textContent = gen.timeline.deactive;
-          });
-          let dctt = document.querySelectorAll('[name="dc-t-t"]');
-          dctt.forEach(function(dctt) {
-            dctt.textContent = gen.timeline.deactiveT;
-          });
-          let bkt = document.querySelectorAll('[name="bk-t"]');
-          bkt.forEach(function(bkt) {
-            bkt.textContent = gen.timeline.break;
-          });
-          let bktt = document.querySelectorAll('[name="bk-t-t"]');
-          bktt.forEach(function(bktt) {
-            bktt.textContent = gen.timeline.break;
-          });
-        }
-        if (gen && gen.project) {
-          if (gen && gen.project && gen.project.p1) {
-            document.getElementById('ap1-v').classList.value = '';
-            document.getElementById('ap1-v').classList.value = dotST1;
-            document.getElementById('ap1-v').innerHTML = '';
-            document.getElementById('ap1-v').innerHTML = dotST2;
-            document.getElementById('ap1-p').classList.value = '';
-            document.getElementById('ap1-p').classList.value = pgsbST;
-            document.getElementById('ap1-p').setAttribute('x-tooltip', "'"+gen.project.p1.status+" done'");
-            document.getElementById('ap1-p').style.width = gen.project.p1.status;
-            document.getElementById('ap1-s').innerText = gen.project.p1.tag;
-            document.getElementById('ap1-t').innerText = gen.project.p1.title;
-            document.getElementById('ap1-d').innerText = gen.project.p1.disc;
-            document.getElementById('wp').innerText = gen.project.p1.title;
-          }
-          if (gen && gen.project && gen.project.p2) {
-            document.getElementById('ap2-p').setAttribute('x-tooltip', "'"+gen.project.p2.status+" done'");
-            document.getElementById('ap2-p').style.width = gen.project.p2.status;
-            document.getElementById('ap2-s').innerText = gen.project.p2.tag;
-            document.getElementById('ap2-t').innerText = gen.project.p2.title;
-            document.getElementById('ap2-d').innerText = gen.project.p2.disc;
-          }
-          if (gen && gen.project && gen.project.p3) {
-            document.getElementById('ap3-p').setAttribute('x-tooltip', "'"+gen.project.p3.status+" done'");
-            document.getElementById('ap3-p').style.width = gen.project.p3.status;
-            document.getElementById('ap3-s').innerText = gen.project.p3.tag;
-            document.getElementById('ap3-t').innerText = gen.project.p3.title;
-            document.getElementById('ap3-d').innerText = gen.project.p3.disc;
-          }
-        }
-        if (gen && gen.mission) {
-          if (gen && gen.mission && gen.mission.m1) {
-            document.getElementById('am1-v').classList.value = '';
-            document.getElementById('am1-v').classList.value = dotST1;
-            document.getElementById('am1-v').innerHTML = '';
-            document.getElementById('am1-v').innerHTML = dotST2;
-            document.getElementById('am1-p').classList.value = '';
-            document.getElementById('am1-p').classList.value = pgsbST;
-            document.getElementById('am1-p').setAttribute('x-tooltip', "'"+gen.mission.m1.status+" done'");
-            document.getElementById('am1-p').style.width = gen.mission.m1.status;
-            document.getElementById('am1-s').innerText = gen.mission.m1.tag;
-            document.getElementById('am1-t').innerText = gen.mission.m1.title;
-            document.getElementById('am1-d').innerText = gen.mission.m1.disc;
-          }
-          if (gen && gen.mission && gen.mission.m2) {
-            document.getElementById('am2-p').setAttribute('x-tooltip', "'"+gen.mission.m2.status+" done'");
-            document.getElementById('am2-p').style.width = gen.mission.m2.status;
-            document.getElementById('am2-s').innerText = gen.mission.m2.tag;
-            document.getElementById('am2-t').innerText = gen.mission.m2.title;
-            document.getElementById('am2-d').innerText = gen.mission.m2.disc;
-          }
-          if (gen && gen.mission && gen.mission.m3) {
-            document.getElementById('am3-p').setAttribute('x-tooltip', "'"+gen.mission.m3.status+" done'");
-            document.getElementById('am3-p').style.width = gen.mission.m3.status;
-            document.getElementById('am3-s').innerText = gen.mission.m3.tag;
-            document.getElementById('am3-t').innerText = gen.mission.m3.title;
-            document.getElementById('am3-d').innerText = gen.mission.m3.disc;
-          }
-        }
-        if (gen && gen.task) {
-          if (gen && gen.task && gen.task.t1) {
-            document.getElementById('at1-v').classList.value = '';
-            document.getElementById('at1-v').classList.value = dotST1;
-            document.getElementById('at1-v').innerHTML = '';
-            document.getElementById('at1-v').innerHTML = dotST2;
-            document.getElementById('at1-p').classList.value = '';
-            document.getElementById('at1-p').classList.value = pgsbST;
-            document.getElementById('at1-p').setAttribute('x-tooltip', "'"+gen.task.t1.status+" done'");
-            document.getElementById('at1-p').style.width = gen.task.t1.status;
-            document.getElementById('at1-s').innerText = gen.task.t1.tag;
-            document.getElementById('at1-t').innerText = gen.task.t1.title;
-            document.getElementById('at1-d').innerText = gen.task.t1.disc;
-          }
-          if (gen && gen.task && gen.task.t2) {
-            document.getElementById('at2-p').setAttribute('x-tooltip', "'"+gen.task.t2.status+" done'");
-            document.getElementById('at2-p').style.width = gen.task.t2.status;
-            document.getElementById('at2-s').innerText = gen.task.t2.tag;
-            document.getElementById('at2-t').innerText = gen.task.t2.title;
-            document.getElementById('at2-d').innerText = gen.task.t2.disc;
-          }
-          if (gen && gen.task && gen.task.t3) {
-            document.getElementById('at3-p').setAttribute('x-tooltip', "'"+gen.task.t3.status+" done'");
-            document.getElementById('at3-p').style.width = gen.task.t3.status;
-            document.getElementById('at3-s').innerText = gen.task.t3.tag;
-            document.getElementById('at3-t').innerText = gen.task.t3.title;
-            document.getElementById('at3-d').innerText = gen.task.t3.disc;
-          }
-        }
-        if (gen && gen.error) {
-          if (gen && gen.error && gen.error.e1) {
-            document.getElementById('ae1-v').classList.value = '';
-            document.getElementById('ae1-v').classList.value = dotST1;
-            document.getElementById('ae1-v').innerHTML = '';
-            document.getElementById('ae1-v').innerHTML = dotST2;
-            document.getElementById('ae1-p').classList.value = '';
-            document.getElementById('ae1-p').classList.value = pgsbST;
-            document.getElementById('ae1-p').setAttribute('x-tooltip', "'"+gen.error.e1.status+" done'");
-            document.getElementById('ae1-p').style.width = gen.error.e1.status;
-            document.getElementById('ae1-s').innerText = gen.error.e1.tag;
-            document.getElementById('ae1-t').innerText = gen.error.e1.title;
-            document.getElementById('ae1-d').innerText = gen.error.e1.disc;
-          }
-          if (gen && gen.error && gen.error.e2) {
-            document.getElementById('ae2-p').setAttribute('x-tooltip', "'"+gen.error.e2.status+" done'");
-            document.getElementById('ae2-p').style.width = gen.error.e2.status;
-            document.getElementById('ae2-s').innerText = gen.error.e2.tag;
-            document.getElementById('ae2-t').innerText = gen.error.e2.title;
-            document.getElementById('ae2-d').innerText = gen.error.e2.disc;
-          }
-          if (gen && gen.error && gen.error.e3) {
-            document.getElementById('ae3-p').setAttribute('x-tooltip', "'"+gen.error.e3.status+" done'");
-            document.getElementById('ae3-p').style.width = gen.error.e3.status;
-            document.getElementById('ae3-s').innerText = gen.error.e3.tag;
-            document.getElementById('ae3-t').innerText = gen.error.e3.title;
-            document.getElementById('ae3-d').innerText = gen.error.e3.disc;
-          }
-        }
-        if (gen && gen.ticket) {
-          if (gen && gen.ticket && gen.ticket.p1) {
-            document.getElementById('nt1-v').classList.value = '';
-            document.getElementById('nt1-v').classList.value = dotST1;
-            document.getElementById('nt1-v').innerHTML = '';
-            document.getElementById('nt1-v').innerHTML = dotST2;
-            document.getElementById('nt1-p').classList.value = '';
-            document.getElementById('nt1-p').classList.value = pgsbST;
-            document.getElementById('nt1-p').setAttribute('x-tooltip', "'"+gen.ticket.p1.status+" done'");
-            document.getElementById('nt1-p').style.width = gen.ticket.p1.status;
-            document.getElementById('nt1-s').innerText = gen.ticket.p1.tag;
-            document.getElementById('nt1-t').innerText = gen.ticket.p1.title;
-            document.getElementById('nt1-d').innerText = gen.ticket.p1.disc;
-          }
-          if (gen && gen.ticket && gen.ticket.p2) {
-            document.getElementById('nt2-p').setAttribute('x-tooltip', "'"+gen.ticket.p2.status+" done'");
-            document.getElementById('nt2-p').style.width = gen.ticket.p2.status;
-            document.getElementById('nt2-s').innerText = gen.ticket.p2.tag;
-            document.getElementById('nt2-t').innerText = gen.ticket.p2.title;
-            document.getElementById('nt2-d').innerText = gen.ticket.p2.disc;
-          }
-          if (gen && gen.ticket && gen.ticket.p3) {
-            document.getElementById('nt3-p').setAttribute('x-tooltip', "'"+gen.ticket.p3.status+" done'");
-            document.getElementById('nt3-p').style.width = gen.ticket.p3.status;
-            document.getElementById('nt3-s').innerText = gen.ticket.p3.tag;
-            document.getElementById('nt3-t').innerText = gen.ticket.p3.title;
-            document.getElementById('nt3-d').innerText = gen.ticket.p3.disc;
-          }
-        }
-        let wkon = "";
-        if (gen && gen.mission && gen.mission.m1 && gen.mission.m1.tag == "Active" && gen.task && gen.task.t1 && gen.task.t1.tag == "Active") {
-          
-        }
-        
 
-        var randomInterval = Math.floor(Math.random() * 5) + 1;
-        setTimeout(update, randomInterval * 1000);
+        const workTypeElement = document.getElementById('wo');
+        if (workTypeElement) {
+            const workType = data.working_on.working_type;
+            workTypeElement.classList.remove('text-info', 'text-success', 'text-error', 'text-warning');
+            switch (workType) {
+                case "Mission":
+                    workTypeElement.classList.add('text-info');
+                    break;
+                case "Task":
+                    workTypeElement.classList.add('text-success');
+                    break;
+                case "Error":
+                    workTypeElement.classList.add('text-error');
+                    break;
+                case "Ticket":
+                    workTypeElement.classList.add('text-warning');
+                    break;
+                default:
+                    break;
+            }
+            workTypeElement.textContent = workType;
+        }
+
+        // Active Time
+        const activeTimeElement = document.querySelector("#active-t");
+        if (activeTimeElement) {
+            activeTimeElement.innerText = `${data.active_time.total_time} Time spending`;
+        }
+
+        const currentActiveTimeElement = document.querySelector("#time-ac");
+        if (currentActiveTimeElement) {
+            currentActiveTimeElement.innerText = data.active_time.current_session;
+        }
+
+        // Deactive Time
+        const deactiveTimeElement = document.querySelector("#deactive-t");
+        if (deactiveTimeElement) {
+            deactiveTimeElement.innerText = `${data.deactive_time.total_time} Time spending`;
+        }
+
+        const currentDeactiveTimeElement = document.querySelector("#time-dt");
+        if (currentDeactiveTimeElement) {
+            currentDeactiveTimeElement.innerText = data.deactive_time.current_session;
+        }
+
+        // Break Time
+        const breakTimeElement = document.querySelector("#break-t");
+        if (breakTimeElement) {
+            breakTimeElement.innerText = `${data.break_time.total_time} Time spending`;
+        }
+
+        const currentBreakTimeElement = document.querySelector("#time-ts");
+        if (currentBreakTimeElement) {
+            currentBreakTimeElement.innerText = data.break_time.current_session;
+        }
+
+        // Performance Rating
+        const performanceRatingElement = document.querySelector("#tm-pr");
+        if (performanceRatingElement) {
+            performanceRatingElement.innerText = data.performance_rating;
+        }
+
+        // Success Rate
+        const successRateElement = document.querySelector("#tm-sr");
+        if (successRateElement) {
+            successRateElement.innerText = data.success_rate;
+        }
+
+        // Helper function to generate HTML for timeline items
+        function getTimelineHtml(items) {
+            let html = "";
+            items.forEach((item, index) => {
+                let statusClass = "";
+                switch (item.status) {
+                    case "Acctive":
+                        statusClass = "bg-success is-active";
+                        break;
+                    case "Pending":
+                        statusClass = "bg-warning";
+                        break;
+                    case "Fail":
+                        statusClass = "bg-error";
+                        break;
+                    default:
+                        statusClass = "bg-slate-500 dark:bg-navy-400";
+                }
+                html += `
+                  <li class="timeline-item">
+                    <div id="ap${index + 1}-v" class="timeline-item-point rounded-full ${statusClass}">
+                      ${item.status === "Acctive" ? '<span class="inline-flex h-full w-full animate-ping rounded-full bg-success opacity-80"></span>' : ""}
+                    </div>
+                    <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                      <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                        <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                          ${item.title}
+                        </p>
+                        <span class="text-xs text-slate-400 dark:text-navy-300">${item.status}</span>
+                      </div>
+                      <p class="py-1 line-clamp-3">${item.description}</p>
+                      <div class="progress h-2 bg-slate-150 dark:bg-navy-500">
+                        <div id="ap${index + 1}-p" class="relative overflow-hidden rounded-full ${statusClass}" style="width: ${item.progress}%;" x-tooltip="'${item.progress}% done'"></div>
+                      </div>
+                    </div>
+                  </li>
+                `;
+            });
+            return html;
+        }
+
+        // Update Timeline for each card
+        for (const cardName in data.cards) {
+            if (data.cards.hasOwnProperty(cardName)) {
+                const cardData = data.cards[cardName];
+                const cardId = cardName.toLowerCase().replace(/ /g, "-");
+                const cardContainer = document.getElementById(cardId);
+                document.getElementById(cardId+"-av").innerText = cardData.available;
+                document.getElementById(cardId+"-co").innerText = cardData.completed;
+                if (cardContainer) {
+                    // Update header details
+                    const totalElement = cardContainer.querySelector("[name='total']");
+                    if (totalElement) {
+                        totalElement.textContent = cardData.total;
+                    }
+                    const completedElement = cardContainer.querySelector("[name='completed']");
+                    if (completedElement) {
+                        completedElement.textContent = cardData.completed || cardData.solved || 0;
+                    }
+
+                    // Generate and update the timeline items inside <ol class="timeline">
+                    const timelineContainer = cardContainer.querySelector("ol.timeline");
+                    if (timelineContainer) {
+                        const timelineHtml = getTimelineHtml(cardData.items);
+                        timelineContainer.innerHTML = timelineHtml;
+                    }
+                }
+            }
+        }
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    timelineData();
+    setInterval(timelineData, 10000);
+});
+
+</script>
+
+
+
+
+
+
+<script>
+async function indexData() {
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/sakibweb/sakibweb.github.io-data/main/index.json');
+        const data = await response.json();
+
+        const profileNameElement = document.getElementById('profile-name');
+        if (profileNameElement) {
+            profileNameElement.textContent = data.profile.name;
+        } else {
+            console.error("Element with ID 'profile-name' not found");
+        }
+
+        const profileTaglineElement = document.getElementById('profile-tagline');
+        if (profileTaglineElement) {
+            profileTaglineElement.textContent = data.profile.tagline;
+        } else {
+            console.error("Element with ID 'profile-tagline' not found");
+        }
+
+        // Update stats section
+        data.stats.forEach(stat => {
+            const statElement = document.getElementById(`tp-${stat.title.replace(/\s+/g, '-').toLowerCase().slice(0, 3)}`);
+            if (statElement) {
+                statElement.textContent = stat.value;
+            } else {
+                console.error(`Element with ID:${stat.title.replace(/\s+/g, '-').toLowerCase().slice(0, 3)} ==='tp-${stat.title}' not found`);
+            }
+        });
+
+        // Update gallery section (swiper)
+        const swiperWrapper = document.querySelector('.swiper-wrapper');
+        swiperWrapper.innerHTML = '';
+
+        data.gallery.forEach(image => {
+            const slide = document.createElement('div');
+            slide.classList.add('swiper-slide');
+            const img = document.createElement('img');
+            img.src = image.img;
+            img.alt = image.alt;
+            img.classList.add('h-full', 'w-full', 'rounded-lg', 'object-cover');
+            slide.appendChild(img);
+            swiperWrapper.appendChild(slide);
+        });
+        const swiper = new Swiper('.swiper', {
+            effect: 'cards',
+            grabCursor: true,
+            autoplay: { delay: 2000 }
+        });
+
+        // Update social links (uncomment if needed)
+        // const socialLinksContainer = document.querySelector('.mb-3.mt-3.flex.grow.flex-wrap.items-start');
+        // socialLinksContainer.innerHTML = '';
+
+        // data.profile.socials.forEach(social => {
+        //     const link = document.createElement('a');
+        //     link.href = social.link;
+        //     link.target = "_blank";
+        //     link.classList.add("tag", "rounded-full", "bg-info/10", "text-info", "hover:bg-info/20", "focus:bg-info/20", "active:bg-info/25", "mr-1");
+        //     link.setAttribute("x-tooltip.placement.top", social.platform);
+
+        //     const icon = document.createElement('i');
+        //     icon.classList.add("fa-brands", social.icon, "transition-transform", "duration-500", "ease-in-out", "hover:rotate-[360deg]");
+        //     link.appendChild(icon);
+        //     socialLinksContainer.appendChild(link);
+        // });
+
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    indexData();
+    setInterval(indexData, 30000);
+});
+
+</script>
+
+<script>
+  async function updateStatus() {
+      try {
+          const response = await fetch('https://raw.githubusercontent.com/sakibweb/sakibweb.github.io-data/main/active.json');
+          const data = await response.json();
+  
+          // Define status colors and messages
+          const statusColors = {
+              "online": { bgColor: "bg-success", textColor: "text-success" },
+              "active": { bgColor: "bg-success", textColor: "text-success" },
+              "offline": { bgColor: "bg-error", textColor: "text-error" },
+              "deactive": { bgColor: "bg-error", textColor: "text-error" },
+              "break": { bgColor: "bg-warning", textColor: "text-warning" },
+              "busy": { bgColor: "bg-warning", textColor: "text-warning" },
+              "ghost": { bgColor: "bg-slate", textColor: "text-slate dark:text-navy" }
+          };
+  
+          // Get status and message, default to 'ghost' if values are invalid
+          const status = data.status.toLowerCase() in statusColors ? data.status.toLowerCase() : "ghost";
+          const message = data.message || "Status unknown";
+  
+          // Apply the styles based on status
+          const statusColor = statusColors[status];
+  
+          // Update the dot element
+          const dotElement = document.getElementById('dot');
+          const dotD1 = document.getElementById('dot-d1');
+          const dotD2 = document.getElementById('dot-d2');
+
+          if (dotElement && dotD1 && dotD2) {
+            dotD1.className = `absolute inline-flex h-full w-full animate-ping rounded-full ${statusColor.bgColor} opacity-20`;
+            dotD2.className = `inline-flex h-4 w-4 rounded-full ${statusColor.bgColor} border-2 border-background-color dark:border-navy-700`;
+            dotElement.setAttribute('x-tooltip.placement.right', `'${status.charAt(0).toUpperCase() + status.slice(1)}'`);
+          }
+  
+          // Update the badge element
+          const dotBadge = document.getElementById('dot-f');
+          const dotBadgeD1 = document.getElementById('dot-f-d1');
+          const dotBadgeD2 = document.getElementById('dot-f-d2');
+  
+          if (dotBadge && dotBadgeD1 && dotBadgeD2) {
+              dotBadge.className = `badge space-x-2.5 mt-2 rounded-full ${statusColor.textColor} dark:bg-${statusColor.textColor}/15`;
+              dotBadgeD1.className = `h-2 w-2 rounded-full ${statusColor.textColor} ${statusColor.bgColor}`;
+              dotBadgeD2.textContent = message;
+          }
+      } catch (error) {
+          console.error("Error fetching data:", error);
+  
+          // Handle error by setting default 'ghost' status
+          const dotElement = document.getElementById('dot');
+          const dotD1 = document.getElementById('dot-d1');
+          const dotD2 = document.getElementById('dot-d2');
+          const dotBadge = document.getElementById('dot-f');
+          const dotBadgeD1 = document.getElementById('dot-f-d1');
+          const dotBadgeD2 = document.getElementById('dot-f-d2');
+  
+          if (dotElement && dotD1 && dotD2) {
+              dotD1.className = `absolute inline-flex h-full w-full animate-ping rounded-full bg-slate opacity-20`;
+              dotD2.className = `inline-flex h-4 w-4 rounded-full bg-slate border-2 border-background-color dark:border-navy-700`;
+              dotElement.setAttribute('x-tooltip.placement.right', "'Ghost'");
+          }
+  
+          if (dotBadge && dotBadgeD1 && dotBadgeD2) {
+              dotBadge.className = `badge space-x-2.5 mt-2 rounded-full text-slate dark:text-navy dark:bg-slate/15`;
+              dotBadgeD1.className = `h-2 w-2 rounded-full text-slate`;
+              dotBadgeD2.textContent = "Status unknown";
+          }
       }
+  }
+  
+  // Initial update and set interval to refresh every 5 seconds
+  updateStatus();
+  setInterval(updateStatus, 5000);
+  </script>
+  
 
-      window.onload = function() {
-        update();
-      };
-    </script>
+
+
+  <script>
+    async function loadResume() {
+      try {
+        // Fetch the JSON data from the GitHub repository
+        const response = await fetch("https://raw.githubusercontent.com/sakibweb/sakibweb.github.io-data/main/resume.json");
+        const data = await response.json();
+        if (!data.training) {
+          throw new Error("The 'training' property is missing in the fetched JSON data.");
+        }
+
+        const tableBody = document.querySelector("#tabCourse tbody");
+        tableBody.innerHTML = "";
+        data.training.forEach(course => {
+          const row = document.createElement("tr");
+  
+          // Create table cells for each property
+          row.innerHTML = `
+            <td class="whitespace-nowrap border border-l-0 border-slate-200 px-3 py-3 dark:border-navy-500">${course.title}</td>
+            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">${course.topic}</td>
+            <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">${course.institute}</td>
+            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">${course.location}</td>
+            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">${course.duration}</td>
+            <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">${course.registration}</td>
+          `;
+  
+          // Append the row to the table body
+          tableBody.appendChild(row);
+        });
+
+
+
+
+
+
+        // Update Academic Table
+        const academicTable = document.querySelector("#tabEducation tbody");
+        academicTable.innerHTML = ""; // Clear existing rows
+        data.academic.forEach((academic) => {
+          const row = `
+            <tr>
+              <td class="whitespace-nowrap border border-l-0 border-slate-200 px-3 py-3 dark:border-navy-500">${academic.title}</td>
+              <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">${academic.major}</td>
+              <td class="whitespace-nowrap border border-slate-200 px-3 py-3 dark:border-navy-500">${academic.institute}</td>
+              <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">${academic.roll}</td>
+              <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">${academic.result}</td>
+              <td class="whitespace-nowrap border border-r-0 border-slate-200 px-3 py-3 dark:border-navy-500">${academic.year}</td>
+            </tr>
+          `;
+          academicTable.insertAdjacentHTML("beforeend", row);
+        });
+
+
+      } catch (error) {
+        console.error("Error fetching or processing the JSON data:", error);
+      }
+    }
+  
+    // Load the training data initially
+    loadResume();
+  
+    // Refresh the training data every 45 seconds
+    setInterval(loadResume, 45000);
+  </script>
+  
+
+
+
+
+
     <script>
 	document.getElementById('htmlElement').className += " dark";
     </script>
